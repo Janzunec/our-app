@@ -22,11 +22,10 @@ module.exports = {
 				contact: '700%'
 			},
 			fontFamily: {
-				main: ['Nova Square', 'Anurati', 'Arial'],
+				main: ['Nova Square', 'Arial'],
 				src: ['Source Code Pro', 'monospace'],
 				jtm: ['JetBrains Mono', 'monospace'],
 				lba: ['La Belle Aurore', 'cursive'],
-				per: ['Permanent Marker', 'cursive'],
 				lob: ['Lobster', 'cursive']
 			},
 			fontSize: {
