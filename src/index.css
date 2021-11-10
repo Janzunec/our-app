@@ -11,13 +11,17 @@
 		font-family: 'Anurati';
 		src: url(./font/Anurati-Regular.otf), format('otf');
 	}
+
 	body {
-		@apply min-h-screen bg-mainbg cursor-default;
+		@apply min-h-screen bg-mainbg cursor-default overflow-hidden;
 	}
 	.topurple {
 		@apply hover:text-secondary transition-all duration-150 transform-gpu;
 	}
 	.tocyan {
 		@apply hover:text-primary transition-all duration-150 ease-stretch-out transform-gpu;
+	}
+	.threeBack {
+		@apply border-2 fixed top-1/4 right-0 z-10;
 	}
 }
