@@ -48,7 +48,7 @@ const Navbar: React.FC = () => {
 				<hr
 					className={`h-1 w-full bg-primary border-0 transition-all duration-300 transform translate-x-nav ${
 						active === 'about' ? ' ml-about' : ''
-					} ${active === 'skills' ? ' ml-skills' : ''} ${
+					} ${active === 'skills' ? ' ml-skills' : ' '} ${
 						active === 'projects' ? ' ml-projects' : ''
 					} ${active === 'contact' ? ' ml-contact' : ''}`}
 				/>

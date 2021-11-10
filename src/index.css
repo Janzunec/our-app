@@ -3,15 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-	@font-face {
-		font-family: 'Elixia';
-		src: url(./font/ELIXIA.ttf), format('ttf');
-	}
-	@font-face {
-		font-family: 'Anurati';
-		src: url(./font/Anurati-Regular.otf), format('otf');
-	}
-
 	body {
 		@apply min-h-screen bg-mainbg cursor-default overflow-hidden;
 	}
