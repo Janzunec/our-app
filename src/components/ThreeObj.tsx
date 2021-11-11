@@ -77,10 +77,10 @@ const ThreeObj = () => {
 		const ambientLight = new THREE.AmbientLight(0xfff, 1);
 		scene.add(ambientLight);
 
-		const pointLight = new THREE.PointLight(0xffffff, 1);
+		const pointLight = new THREE.PointLight(0xffffff, 1.1);
 		pointLight.position.x = 2;
 		pointLight.position.y = 2;
-		pointLight.position.z = 4;
+		pointLight.position.z = 3;
 		scene.add(pointLight);
 
 		// const spotLight = new THREE.SpotLight(0xfff);
@@ -103,6 +103,9 @@ const ThreeObj = () => {
 		});
 
 		const orbitControls = new OrbitControls(camera, renderer.domElement);
+		orbitControls.enablePan = false;
+		orbitControls.enableZoom = false;
+		orbitControls.enableRotate = false;
 
 		const clock = new THREE.Clock();
 
