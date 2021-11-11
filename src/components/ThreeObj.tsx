@@ -1,134 +1,166 @@
-import { Sphere } from "@react-three/drei";
-import React, { useRef, useEffect } from "react";
-import * as THREE from "three";
-import { Mesh, Scene } from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { Sphere } from '@react-three/drei';
+import React, { useRef, useEffect } from 'react';
+import * as THREE from 'three';
+import { Mesh, Scene } from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const ThreeObj = () => {
-  useEffect(() => {
-    const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x212121);
+	useEffect(() => {
+		const scene = new THREE.Scene();
 
-    const textureLoader = new THREE.TextureLoader();
-    const map = textureLoader.load("./maps/normal_map.png");
+		scene.background = new THREE.Color(0x212121);
+		const glLoader = new GLTFLoader();
 
-    const glLoader = new GLTFLoader();
-    const car = glLoader.load(
-      "Room/scene.gltf",
-      (gltf) => {
-        scene.add(gltf.scene);
-      },
-      function (xhr) {
-        console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-      },
-      (err) => {
-        console.error(err);
-      }
-    );
+		const loadReactLogo = glLoader.load(
+			'ReactLogo/ReactLogo.gltf',
+			(gltf) => {
+				const reactLogo = gltf.scene;
+				scene.add(reactLogo);
+				reactLogo.position.set(0, 0, 0);
+				reactLogo.scale.set(1.2, 1.2, 1.2);
+				reactLogo.rotation.set(0, 2, -0.3);
 
-    const sizes = {
-      width: window.innerWidth,
-      height: window.innerHeight,
-    };
+				const sizes = {
+					width: window.innerWidth,
+					height: window.innerHeight
+				};
 
-    window.addEventListener("resize", () => {
-      // Update sizes
-      sizes.width = window.innerWidth;
-      sizes.height = window.innerHeight;
+				window.addEventListener('resize', () => {
+					// Update sizes
+					sizes.width = window.innerWidth;
+					sizes.height = window.innerHeight;
 
-      // Update camera
-      camera.aspect = sizes.width / sizes.height;
-      camera.updateProjectionMatrix();
+					// Update camera
+					camera.aspect = sizes.width / sizes.height;
+					camera.updateProjectionMatrix();
 
-      // Update renderer
-      renderer.setSize(sizes.width, sizes.height);
-      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-    });
+					// Update renderer
+					renderer.setSize(sizes.width, sizes.height);
+					renderer.setPixelRatio(
+						Math.min(window.devicePixelRatio, 2)
+					);
+				});
 
-    const camera = new THREE.PerspectiveCamera(
-      60,
-      sizes.width / sizes.height,
-      0.1,
-      1000
-    );
+				const camera = new THREE.PerspectiveCamera(
+					60,
+					sizes.width / sizes.height,
+					0.1,
+					1000
+				);
 
-    camera.position.set(4, 4, 8);
+				camera.position.set(4, 4, 8);
 
-    const renderer = new THREE.WebGLRenderer();
+				const renderer = new THREE.WebGLRenderer();
 
-    renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
+				renderer.setSize(
+					window.innerWidth / 1.2,
+					window.innerHeight / 1.2
+				);
 
-    renderer.domElement.classList.add("threeBack");
-    document.body.appendChild(renderer.domElement);
+				renderer.domElement.classList.add('threeBack');
+				document.body.appendChild(renderer.domElement);
 
-    // const geometry = new THREE.SphereGeometry(2, 32, 32);
-    // const material = new THREE.MeshStandardMaterial({
-    // 	color: 0x00ffff,
-    // 	roughness: 0.8,
-    // 	metalness: 0.2,
-    // 	normalMap: map,
-    // 	bumpScale: 0.005
-    // });
-    // const sphere = new THREE.Mesh(geometry, material);
-    // scene.add(sphere);
+				/**
+				 * LIGHT
+				 */
+				const ambientLight = new THREE.AmbientLight(0xfff, 0);
+				scene.add(ambientLight);
 
-    // Light
-    const ambientLight = new THREE.AmbientLight(0xfff, 1);
-    scene.add(ambientLight);
+				/**
+				 *
+				 */
 
-    const pointLight = new THREE.PointLight(0xffffff, 1.1);
-    pointLight.position.x = 2;
-    pointLight.position.y = 2;
-    pointLight.position.z = 3;
-    scene.add(pointLight);
+				let mouseX = 0;
+				let mouseY = 0;
 
-    // const spotLight = new THREE.SpotLight(0xfff);
-    // spotLight.position.set(2, 2, 4);
-    // spotLight.power = 50;
-    // scene.add(spotLight);
+				let targetX = 0;
+				let targetY = 0;
 
-    let mouseX = 0;
-    let mouseY = 0;
+				const windowHalfX = window.innerWidth / 2;
+				const windowHalfY = window.innerHeight / 2;
 
-    let targetX = 0;
-    let targetY = 0;
+				document.addEventListener('mousemove', (event) => {
+					mouseX = event.clientX - windowHalfX;
+					mouseY = event.clientY - windowHalfY;
+				});
 
-    const windowHalfX = window.innerWidth / 2;
-    const windowHalfY = window.innerHeight / 2;
+				/**
+				 * CONTROLS
+				 */
+				const orbitControls = new OrbitControls(
+					camera,
+					renderer.domElement
+				);
+				// orbitControls.enablePan = false;
+				// orbitControls.enableZoom = false;
+				// orbitControls.enableRotate = false;
 
-    document.addEventListener("mousemove", (event) => {
-      mouseX = event.clientX - windowHalfX;
-      mouseY = event.clientY - windowHalfY;
-    });
+				/**
+				 * ANIMATION
+				 */
 
-    const orbitControls = new OrbitControls(camera, renderer.domElement);
-    orbitControls.enablePan = false;
-    orbitControls.enableZoom = false;
-    orbitControls.enableRotate = false;
+				const clock = new THREE.Clock();
 
-    const clock = new THREE.Clock();
+				const animate = () => {
+					requestAnimationFrame(animate);
 
-    const animate = () => {
-      requestAnimationFrame(animate);
-      targetX = mouseX * 0.005;
-      targetY = mouseY * 0.005;
-      const elapsedTime = clock.getElapsedTime();
-      const delta = clock.getDelta();
+					targetX = mouseX * 0.005;
+					targetY = mouseY * 0.005;
 
-      // sphere.rotation.x += 0.1 * (targetY - sphere.rotation.x);
+					const elapsedTime = clock.getElapsedTime();
+					const delta = clock.getDelta();
 
-      // sphere.rotation.y = 1 * elapsedTime + targetX;
+					reactLogo.rotation.y +=
+						(targetX - reactLogo.rotation.y) * 0.02;
+					// Logo rotation
+					if (reactLogo.rotation.y > 1 && reactLogo.rotation.y <= 3) {
+						reactLogo.rotation.y +=
+							(targetX - reactLogo.rotation.y) * 0.015;
+					} else {
+						reactLogo.rotation.y < 1
+							? (reactLogo.rotation.y = 1.00001)
+							: (reactLogo.rotation.y = 3);
+					}
 
-      // spotLight.target = sphere;
+					reactLogo.rotation.x +=
+						(targetY - reactLogo.rotation.x) * 0.08;
+					if (
+						reactLogo.rotation.x > -1.3 &&
+						reactLogo.rotation.x < 0.9
+					) {
+						reactLogo.rotation.x +=
+							(targetY - reactLogo.rotation.x) * 0.08;
+					} else {
+						reactLogo.rotation.x < -1.3
+							? (reactLogo.rotation.x = -1.3)
+							: (reactLogo.rotation.x = 0.9);
+					}
 
-      renderer.render(scene, camera);
-    };
+					// console.log(reactLogo.rotation.x);
 
-    animate();
-  }, []);
+					// reactLogo.rotation.x = 0.5 * elapsedTime;
+					renderer.render(scene, camera);
+				};
 
-  return <div></div>;
+				animate();
+			},
+			function (xhr) {
+				console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
+			},
+			(err) => {
+				console.error(err);
+			}
+		);
+
+		// sphere.rotation.x += 0.1 * (targetY - sphere.rotation.x);
+
+		// sphere.rotation.y = 1 * elapsedTime + targetX;
+
+		// spotLight.target = sphere;
+	}, []);
+
+	return <div></div>;
 };
 
 export default ThreeObj;

@@ -13,6 +13,6 @@
 		@apply hover:text-primary transition-all duration-150 ease-stretch-out transform-gpu;
 	}
 	.threeBack {
-		@apply border-0 fixed top-1/4 right-0 z-10;
+		@apply border-0 top-20 -right-80 fixed z-0;
 	}
 }

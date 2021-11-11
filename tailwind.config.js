@@ -7,7 +7,7 @@ module.exports = {
 				...require('daisyui/colors'),
 				navbg: '#1c1c1c',
 				mainbg: '#212121',
-				primary: '#12E6C8',
+				primary: '#00FFFF',
 				secondary: '#A287F4',
 				ternary: '#0A4DC9'
 			},
