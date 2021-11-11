@@ -1,13 +1,9 @@
-import React from 'react';
-import Title from '../components/Title';
-import * as THREE from 'three';
-import { Routes, Route, Link } from 'react-router-dom';
-import ThreeObj from '../components/ThreeObj';
+import React from "react";
 
-export default function Home() {
-	return (
-		<>
-			<h1>TO JE Contact.. Wip... LULEK</h1>
-		</>
-	);
+export default function Contact() {
+  return (
+    <>
+      <h1>TO JE Contact.. Wip... LULEK</h1>
+    </>
+  );
 }
