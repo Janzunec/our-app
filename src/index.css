@@ -15,4 +15,7 @@
 	.threeBack {
 		@apply border-0 top-20 -right-80 fixed z-0;
 	}
+	.invisible {
+		@apply hidden;
+	}
 }

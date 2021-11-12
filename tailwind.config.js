@@ -8,8 +8,11 @@ module.exports = {
 				navbg: '#1c1c1c',
 				mainbg: '#212121',
 				primary: '#00FFFF',
-				secondary: '#A287F4',
-				ternary: '#0A4DC9'
+				secondary: '#793EF9',
+				ternary: '#0A4DC9',
+				html: '#FF5722',
+				css: '#0D73B7',
+				js: '#F7DF1E'
 			},
 			stroke: ['hover', 'focus'],
 			width: {
@@ -39,7 +42,7 @@ module.exports = {
 				'3xl': '1.875rem',
 				'4xl': '2.25rem',
 				'5xl': '3rem',
-				'6xl': '5.5rem',
+				'6xl': '6rem',
 				'7xl': '6.5rem',
 				'8xl': '7rem',
 				'9xl': '9rem'
@@ -49,6 +52,28 @@ module.exports = {
 			},
 			translate: {
 				nav: '-400%'
+			},
+			animation: {
+				'spin-slow': 'spin 3s linear infinite',
+				'spin-slowY': 'rotateY-slow 4s linear infinite'
+			}
+		},
+		keyframes: {
+			'rotateY-slow': {
+				'0%': {
+					'-webkit-transform': 'rotateY(0deg)',
+					'-moz-transform': 'rotateY(0deg)',
+					'-ms-transform': 'rotateY(0deg)',
+					'-o-transform': 'rotateY(0deg)',
+					transform: 'rotateY(0deg)'
+				},
+				'100%': {
+					'-webkit-transform': 'rotateY(360deg)',
+					'-moz-transform': 'rotateY(360deg)',
+					'-ms-transform': 'rotateY(360deg)',
+					'-o-transform': 'rotateY(360deg)',
+					transform: 'rotateY(360deg)'
+				}
 			}
 		},
 		stroke: (theme) => ({
@@ -58,5 +83,33 @@ module.exports = {
 	variants: {
 		extend: {}
 	},
-	plugins: [require('daisyui')]
+	plugins: [require('daisyui')],
+	daisyui: {
+		themes: [
+			{
+				mytheme: {
+					primary: '#570df8',
+					'primary-focus': '#4506cb',
+					'primary-content': '#212121',
+					secondary: '#f000b8',
+					'secondary-focus': '#bd0091',
+					'secondary-content': '#212121',
+					accent: '#00ffff',
+					'accent-focus': '#00cccc',
+					'accent-content': '#212121',
+					neutral: '#212121',
+					'neutral-focus': '#2a2e37',
+					'neutral-content': '#212121',
+					'base-100': '#212121',
+					'base-200': '#212121',
+					'base-300': '#212121',
+					'base-content': '#0ff',
+					info: '#2094f3',
+					success: '#009485',
+					warning: '#ff9900',
+					error: '#ff5724'
+				}
+			}
+		]
+	}
 };
