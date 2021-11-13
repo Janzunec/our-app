@@ -49,7 +49,7 @@ const ThreeObj = () => {
 					1000
 				);
 
-				camera.position.set(4, 4, 8);
+				camera.position.set(0, 0, 8);
 
 				const renderer = new THREE.WebGLRenderer();
 
@@ -92,6 +92,7 @@ const ThreeObj = () => {
 					camera,
 					renderer.domElement
 				);
+				orbitControls.enableDamping = true;
 				// orbitControls.enablePan = false;
 				// orbitControls.enableZoom = false;
 				// orbitControls.enableRotate = false;
@@ -111,35 +112,63 @@ const ThreeObj = () => {
 					const elapsedTime = clock.getElapsedTime();
 					const delta = clock.getDelta();
 
-					reactLogo.rotation.y +=
-						(targetX - reactLogo.rotation.y) * 0.02;
+					console.log(sizes.height, sizes.width);
+
+					sizes.width >= 1500
+						? (reactLogo.rotation.y +=
+								(targetX - reactLogo.rotation.y) * 0.02)
+						: (reactLogo.rotation.y = 1.6);
 					// Logo rotation
-					if (reactLogo.rotation.y > 1 && reactLogo.rotation.y <= 3) {
+					if (
+						reactLogo.rotation.y > 1 &&
+						reactLogo.rotation.y <= 3 &&
+						sizes.width >= 1500
+					) {
 						reactLogo.rotation.y +=
 							(targetX - reactLogo.rotation.y) * 0.015;
 					} else {
-						reactLogo.rotation.y < 1
-							? (reactLogo.rotation.y = 1.00001)
-							: (reactLogo.rotation.y = 3);
+						if (sizes.width >= 1500) {
+							reactLogo.rotation.y < 1
+								? (reactLogo.rotation.y = 1.00001)
+								: (reactLogo.rotation.y = 3);
+						}
 					}
 
-					reactLogo.rotation.x +=
-						(targetY - reactLogo.rotation.x) * 0.08;
+					sizes.width >= 1500
+						? (reactLogo.rotation.x +=
+								(targetY - reactLogo.rotation.x) * 0.08)
+						: (reactLogo.rotation.x = 0);
+
 					if (
 						reactLogo.rotation.x > -1.3 &&
-						reactLogo.rotation.x < 0.9
+						reactLogo.rotation.x < 0.9 &&
+						sizes.width >= 1500
 					) {
 						reactLogo.rotation.x +=
 							(targetY - reactLogo.rotation.x) * 0.08;
 					} else {
-						reactLogo.rotation.x < -1.3
-							? (reactLogo.rotation.x = -1.3)
-							: (reactLogo.rotation.x = 0.9);
+						if (sizes.width >= 1500) {
+							reactLogo.rotation.x < -1.3
+								? (reactLogo.rotation.x = -1.3)
+								: (reactLogo.rotation.x = 0.9);
+						}
+					}
+					if (sizes.width >= 1500) {
+						reactLogo.scale.x = sizes.width / 1000 - 0.6;
+						reactLogo.scale.y = sizes.width / 1000 - 0.6;
+						reactLogo.scale.z = sizes.width / 1000 - 0.6;
+					} else if (sizes.width < 640) {
+						reactLogo.scale.x = sizes.width / 1000 + 0.3;
+						reactLogo.scale.y = sizes.width / 1000 + 0.3;
+						reactLogo.scale.z = sizes.width / 1000 + 0.3;
+					} else {
+						reactLogo.scale.x = sizes.width / 1000;
+						reactLogo.scale.y = sizes.width / 1000;
+						reactLogo.scale.z = sizes.width / 1000;
 					}
 
-					// console.log(reactLogo.rotation.x);
+					orbitControls.update();
 
-					// reactLogo.rotation.x = 0.5 * elapsedTime;
 					renderer.render(scene, camera);
 				};
 
@@ -152,12 +181,6 @@ const ThreeObj = () => {
 				console.error(err);
 			}
 		);
-
-		// sphere.rotation.x += 0.1 * (targetY - sphere.rotation.x);
-
-		// sphere.rotation.y = 1 * elapsedTime + targetX;
-
-		// spotLight.target = sphere;
 	}, []);
 
 	return <div></div>;

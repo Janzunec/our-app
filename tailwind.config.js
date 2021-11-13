@@ -12,7 +12,8 @@ module.exports = {
 				ternary: '#0A4DC9',
 				html: '#FF5722',
 				css: '#0D73B7',
-				js: '#F7DF1E'
+				js: '#F7DF1E',
+				php: '#787CB4'
 			},
 			stroke: ['hover', 'focus'],
 			width: {
@@ -76,9 +77,16 @@ module.exports = {
 				}
 			}
 		},
-		stroke: (theme) => ({
-			purple: theme('strokeColor')
-		})
+		screens: {
+			tablet: '640px',
+			// => @media (min-width: 640px) { ... }
+
+			laptop: '1280px',
+			// => @media (min-width: 1280px) { ... }
+
+			desktop: '1400px'
+			// => @media (min-width: 1400px) { ... }
+		}
 	},
 	variants: {
 		extend: {}

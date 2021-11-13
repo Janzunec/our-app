@@ -18,7 +18,7 @@ function App() {
 	}, [pathname]);
 
 	return (
-		<div className='min-h-screen flex items-center'>
+		<div className='h-auto flex'>
 			<Navbar />
 			<Routes>
 				<Route path='/' element={<Home />} />

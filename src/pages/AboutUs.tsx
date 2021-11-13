@@ -1,5 +1,19 @@
 import React, { useState } from 'react';
 import LightUpString from '../components/LightUpString';
+import {
+	SiTailwindcss,
+	SiMysql,
+	SiReact,
+	SiHtml5,
+	SiCss3,
+	SiJavascript,
+	SiTypescript,
+	SiCplusplus,
+	SiThreedotjs,
+	SiPhp,
+	SiVisualstudiocode,
+	SiPython
+} from 'react-icons/si';
 
 const About: React.FC = () => {
 	const first = Math.floor(Math.random() * 2) === 1 ? true : false;
@@ -70,19 +84,30 @@ const About: React.FC = () => {
 							<LightUpString content='<p>' color='tocyan' />
 						</div>
 					</div>
-					<div className='w-1/2 h-auto'>
-						<div className='flex flex-row flex-wrap justify-center items-center mt-8 gap-32'>
-							<div className=' text-html text-9xl animate-spin-slowY'>
-								<i className='fab fa-html5'></i>
-							</div>
-							<div className=' text-css text-9xl animate-spin-slowY'>
-								<i className='fab fa-css3-alt'></i>
-							</div>
-							<div className=' text-js text-9xl animate-spin-slowY'>
-								<i className='fab fa-js-square'></i>
-							</div>
+					<div className='w-1/2 min-h-full border-0'>
+						<div className='flex flex-row flex-wrap justify-center items-center mt-8 gap-16'>
+							<SiHtml5 className=' text-html text-8xl animate-spin-slowY ' />
+							<SiCss3 className=' text-css text-8xl animate-spin-slowY' />
+							<SiJavascript className=' text-js text-8xl animate-spin-slowY' />
+							<SiTypescript className=' text-blue-700 text-8xl animate-spin-slowY' />
+							<SiReact className=' text-primary text-8xl animate-spin-slow' />
+							<SiTailwindcss className='text-primary text-8xl animate-spin-slowY' />
+							<SiThreedotjs className=' text-gray-100 text-8xl animate-spin-slow' />
+							<SiVisualstudiocode className='text-blue-500 text-8xl animate-spin-slowY' />
+							<SiMysql className=' text-blue-900 text-8xl animate-spin-slowY' />
+							<SiPhp className=' text-php text-8xl animate-spin-slowY' />
+							<SiCplusplus className='text-blue-900 text-8xl animate-spin-slowY' />
+							<SiPython className='text-8xl text-blue-600  animate-spin-slow' />
 						</div>
 					</div>
+				</div>
+			)}
+			{isChecked && (
+				<div className='text-secondary'>
+					Mark. Svojo stran delaj TUKAJ notri! Lahko si malo pogledaš
+					moje za kake mere in pa, če želiš da je tema spletne strani
+					podobna, lahko pa ustvariš popolnoma svojo, kak ti paše, saj
+					je to tut tvoj del portfolia.
 				</div>
 			)}
 		</div>
