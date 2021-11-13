@@ -63,16 +63,16 @@ const About: React.FC = () => {
 							<p>
 								I am a junior Front-End developer currently
 								schooling for a computer engineer in Maribor,
-								Slovenia. I have a lot of passion for creating
-								unforgettable dynamic user expirience with
-								different UI animations and effects.
+								Slovenia. My passion is creating unforgettable
+								dynamic user expirience with different UI
+								animations and effects.
 							</p>
 							<p>
 								I am a well-organised, problem-solving,
 								hard-working person who always insists to be on
-								time. I love programming, but when I'm not at my
-								desk working, I am in school or riding Downhill
-								at Bike Park Pohorje.
+								time and get the job done. I love programming
+								and when I'm not at my desk, I am in school or
+								riding Downhill at Bike Park Pohorje.
 							</p>
 							<p>
 								Am interested in all Front-end technologies and
