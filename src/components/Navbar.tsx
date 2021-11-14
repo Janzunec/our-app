@@ -6,7 +6,7 @@ const Navbar: React.FC = () => {
 	const { pathname } = useLocation();
 
 	return (
-		<nav className='justify-between text-2xl bg-navbg flex align-middle text-white min-w-full fixed top-0 left-0 border-b border-gray-300 z-20'>
+		<nav className='w-screen justify-between text-2xl bg-navbg flex align-middle text-white min-w-full fixed top-0 left-0 border-b border-gray-300 z-20'>
 			<Link
 				to='/'
 				className='w-1/8 flex items-center justify-center pb-1 font-lob text-3xl text-secondary hover:text-primary transform hover:scale-125 transition-all duration-300'

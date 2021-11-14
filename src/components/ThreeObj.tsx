@@ -112,7 +112,7 @@ const ThreeObj = () => {
 					const elapsedTime = clock.getElapsedTime();
 					const delta = clock.getDelta();
 
-					console.log(sizes.height, sizes.width);
+					// console.log(sizes.height, sizes.width);
 
 					sizes.width >= 1500
 						? (reactLogo.rotation.y +=
@@ -154,13 +154,13 @@ const ThreeObj = () => {
 						}
 					}
 					if (sizes.width >= 1500) {
-						reactLogo.scale.x = sizes.width / 1000 - 0.6;
-						reactLogo.scale.y = sizes.width / 1000 - 0.6;
-						reactLogo.scale.z = sizes.width / 1000 - 0.6;
+						reactLogo.scale.x = sizes.width / 1000 - 0.7;
+						reactLogo.scale.y = sizes.width / 1000 - 0.7;
+						reactLogo.scale.z = sizes.width / 1000 - 0.7;
 					} else if (sizes.width < 640) {
-						reactLogo.scale.x = sizes.width / 1000 + 0.3;
-						reactLogo.scale.y = sizes.width / 1000 + 0.3;
-						reactLogo.scale.z = sizes.width / 1000 + 0.3;
+						reactLogo.scale.x = sizes.width / 1000 + 0.1;
+						reactLogo.scale.y = sizes.width / 1000 + 0.1;
+						reactLogo.scale.z = sizes.width / 1000 + 0.1;
 					} else {
 						reactLogo.scale.x = sizes.width / 1000;
 						reactLogo.scale.y = sizes.width / 1000;

@@ -4,7 +4,7 @@
 
 @layer base {
 	body {
-		@apply min-h-screen bg-mainbg cursor-default flex flex-col laptop:flex-none items-center laptop:overflow-hidden;
+		@apply min-h-screen w-screen overflow-x-hidden bg-mainbg cursor-default flex flex-col laptop:flex-none laptop:overflow-hidden items-center;
 	}
 	.topurple {
 		@apply hover:text-secondary transition-all duration-150 transform-gpu;
@@ -17,5 +17,20 @@
 	}
 	.invisible {
 		@apply hidden;
+	}
+	.mark:hover {
+		color: white;
+		text-shadow: 0 0 20px white;
+	}
+
+	.name:hover .vrcko {
+		color: black;
+		text-shadow: 0 0 5px black;
+	}
+	.iconText {
+		@apply absolute w-auto p-1 mb-2 min-w-max opacity-0
+        rounded-md shadow-md text-white bg-gray-700
+        text-xs font-bold -translate-y-16 bottom-full
+        transition-all duration-200 scale-0 origin-bottom;
 	}
 }

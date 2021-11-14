@@ -26,6 +26,7 @@ module.exports = {
 				contact: '700%'
 			},
 			fontFamily: {
+				dc: ['Dancing Script', 'cursive'],
 				main: ['Nova Square', 'Arial'],
 				src: ['Source Code Pro', 'monospace'],
 				jtm: ['JetBrains Mono', 'monospace'],
@@ -43,7 +44,7 @@ module.exports = {
 				'3xl': '1.875rem',
 				'4xl': '2.25rem',
 				'5xl': '3rem',
-				'6xl': '6rem',
+				'6xl': '5rem',
 				'7xl': '6.5rem',
 				'8xl': '7rem',
 				'9xl': '9rem'
@@ -57,6 +58,9 @@ module.exports = {
 			animation: {
 				'spin-slow': 'spin 3s linear infinite',
 				'spin-slowY': 'rotateY-slow 4s linear infinite'
+			},
+			dropShadow: {
+				'3xl': '0 0 20px 20px white'
 			}
 		},
 		keyframes: {
@@ -89,7 +93,11 @@ module.exports = {
 		}
 	},
 	variants: {
-		extend: {}
+		extend: {
+			animation: ['hover', 'group-hover'],
+			scale: ['active', 'group-hover'],
+			translate: ['active', 'group-hover']
+		}
 	},
 	plugins: [require('daisyui')],
 	daisyui: {
