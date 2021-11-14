@@ -154,9 +154,9 @@ const ThreeObj = () => {
 						}
 					}
 					if (sizes.width >= 1500) {
-						reactLogo.scale.x = sizes.width / 1000 - 0.7;
-						reactLogo.scale.y = sizes.width / 1000 - 0.7;
-						reactLogo.scale.z = sizes.width / 1000 - 0.7;
+						reactLogo.scale.x = 1;
+						reactLogo.scale.y = 1;
+						reactLogo.scale.z = 1;
 					} else if (sizes.width < 640) {
 						reactLogo.scale.x = sizes.width / 1000 + 0.1;
 						reactLogo.scale.y = sizes.width / 1000 + 0.1;

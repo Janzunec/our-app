@@ -111,7 +111,7 @@ module.exports = {
 					'secondary-focus': '#bd0091',
 					'secondary-content': '#212121',
 					accent: '#00ffff',
-					'accent-focus': '#00cccc',
+					'accent-focus': '#00ffff',
 					'accent-content': '#212121',
 					neutral: '#212121',
 					'neutral-focus': '#2a2e37',

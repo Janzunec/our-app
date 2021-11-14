@@ -84,9 +84,15 @@ const About: React.FC = () => {
 						<div className='text-lg tablet:text-2xl font-lba italic text-secondary mt-0 mb-0'>
 							<LightUpString content='<button>' color='tocyan' />
 						</div>
+						<button className='btn btn-md btn-outline btn-accent ml-6 my-2'>
+							Contact me!
+						</button>
+						<div className='text-lg tablet:text-2xl font-lba italic text-secondary mt-0 mb-0'>
+							<LightUpString content='</button>' color='tocyan' />
+						</div>
 					</div>
-					<div className='w-screen h-screen laptop:w-1/2 laptop:min-h-full border-0'>
-						<div className='min-h-auto flex flex-row flex-wrap justify-center items-center mt-10 laptop:mt-4 gap-16'>
+					<div className='w-screen min-h-auto laptop:w-1/2 laptop:min-h-full border-0 mb-16 mt-10 laptop:mb-0'>
+						<div className='min-h-auto grid grid-cols-3 desktop:grid-cols-4 gap-y-16  laptop:mt-4 laptop:gap-16 desktop:gap-24 desktop:mt-12'>
 							<IconHover
 								icon={SiHtml5}
 								text='HTML 5'
