@@ -113,28 +113,29 @@ const ThreeObj = () => {
 					const delta = clock.getDelta();
 
 					// console.log(sizes.height, sizes.width);
+					// console.log(targetX, targetY);
 
-					sizes.width >= 1500
+					sizes.width >= 1280
 						? (reactLogo.rotation.y +=
 								(targetX - reactLogo.rotation.y) * 0.02)
 						: (reactLogo.rotation.y = 1.6);
 					// Logo rotation
 					if (
-						reactLogo.rotation.y > 1 &&
-						reactLogo.rotation.y <= 3 &&
-						sizes.width >= 1500
+						reactLogo.rotation.y > 0.5 &&
+						reactLogo.rotation.y <= 2.8 &&
+						sizes.width >= 1280
 					) {
 						reactLogo.rotation.y +=
 							(targetX - reactLogo.rotation.y) * 0.015;
 					} else {
-						if (sizes.width >= 1500) {
-							reactLogo.rotation.y < 1
-								? (reactLogo.rotation.y = 1.00001)
-								: (reactLogo.rotation.y = 3);
+						if (sizes.width >= 1280) {
+							reactLogo.rotation.y < 0.5
+								? (reactLogo.rotation.y = 0.50001)
+								: (reactLogo.rotation.y = 2.8);
 						}
 					}
 
-					sizes.width >= 1500
+					sizes.width >= 1280
 						? (reactLogo.rotation.x +=
 								(targetY - reactLogo.rotation.x) * 0.08)
 						: (reactLogo.rotation.x = 0);
@@ -142,7 +143,7 @@ const ThreeObj = () => {
 					if (
 						reactLogo.rotation.x > -1.3 &&
 						reactLogo.rotation.x < 0.9 &&
-						sizes.width >= 1500
+						sizes.width >= 1280
 					) {
 						reactLogo.rotation.x +=
 							(targetY - reactLogo.rotation.x) * 0.08;
@@ -153,7 +154,7 @@ const ThreeObj = () => {
 								: (reactLogo.rotation.x = 0.9);
 						}
 					}
-					if (sizes.width >= 1500) {
+					if (sizes.width >= 1280) {
 						reactLogo.scale.x = 1;
 						reactLogo.scale.y = 1;
 						reactLogo.scale.z = 1;

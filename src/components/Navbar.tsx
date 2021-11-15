@@ -5,6 +5,8 @@ import { useLocation } from 'react-router';
 const Navbar: React.FC = () => {
 	const { pathname } = useLocation();
 
+	const first = Math.floor(Math.random() * 2) === 1 ? 'Jan' : 'Mark';
+
 	return (
 		<nav className='w-screen justify-between text-2xl bg-navbg flex align-middle text-white min-w-full fixed top-0 left-0 border-b border-gray-300 z-20'>
 			<Link
@@ -13,15 +15,15 @@ const Navbar: React.FC = () => {
 			>
 				JM
 			</Link>
-			<ul className='align-middle w-1/2 text-primary font-main grid grid-cols-4 border-0'>
+			<ul className='align-middle w-1/2 text-primary text-2xl laptop:text-3xl font-main grid grid-cols-4 border-0'>
 				<Link
-					to='/about'
+					to={`/about/${first}`}
 					className={`h-14 flex justify-center items-center hover:text-secondary transform hover:scale-125 transition-all duration-300 `}
 				>
 					about
 				</Link>
 				<Link
-					to='/skills'
+					to={`/skills/${first}`}
 					className='h-14 flex justify-center items-center hover:text-secondary transform hover:scale-125  transition-all duration-300
 					'
 				>
@@ -41,10 +43,17 @@ const Navbar: React.FC = () => {
 				</Link>
 				<hr
 					className={`h-1 w-full bg-primary border-0 transition-all duration-300 transform translate-x-nav ${
-						pathname === '/about' ? ' ml-about' : ''
-					} ${pathname === '/skills' ? ' ml-skills' : ' '} ${
-						pathname === '/projects' ? ' ml-projects' : ''
-					} ${pathname === '/contact' ? ' ml-contact' : ''}`}
+						pathname === '/about/Jan' || pathname === '/about/Mark'
+							? ' ml-about'
+							: ''
+					} ${
+						pathname === '/skills/Jan' ||
+						pathname === '/skills/Mark'
+							? ' ml-skills'
+							: ' '
+					} ${pathname === '/projects' ? ' ml-projects' : ''} ${
+						pathname === '/contact' ? ' ml-contact' : ''
+					}`}
 				/>
 			</ul>
 		</nav>

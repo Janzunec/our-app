@@ -27,7 +27,7 @@ export default function Title() {
 					/>{' '}
 				</div>
 			</div>
-			<div className='font-sm text-4xl tablet:text-5xl laptop:text-6xl leading-tight font-main text-primary flex flex-col items-left tablet:p-4 laptop:p-8'>
+			<div className='font-sm text-4xl tablet:text-5xl laptop:text-6xl desktop:text-8xl leading-tight font-main text-primary flex flex-col items-left tablet:p-4 laptop:p-8'>
 				<div>
 					<LightUpString content='`Just ' color='topurple' />
 					<span className='font-jtm text-4xl tablet:text-5xl laptop:text-6xl'>

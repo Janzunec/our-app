@@ -88,8 +88,8 @@ module.exports = {
 			laptop: '1280px',
 			// => @media (min-width: 1280px) { ... }
 
-			desktop: '1400px'
-			// => @media (min-width: 1400px) { ... }
+			desktop: '1500px'
+			// => @media (min-width: 1500px) { ... }
 		}
 	},
 	variants: {
