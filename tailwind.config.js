@@ -19,6 +19,9 @@ module.exports = {
 			width: {
 				'1/8': '12.5%'
 			},
+			height: {
+				'navbar': '6.5vh'
+			},
 			margin: {
 				about: '400%',
 				skills: '500%',
@@ -61,6 +64,9 @@ module.exports = {
 			},
 			dropShadow: {
 				'3xl': '0 0 20px 20px white'
+			},
+			inset: {
+				navtop: '93.5vh'
 			}
 		},
 		keyframes: {

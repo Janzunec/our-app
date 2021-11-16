@@ -67,7 +67,7 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 					<div className='text-lg tablet:text-2xl font-lba italic text-secondary desktop:mt-2'>
 						<LightUpString content='<button>' color='tocyan' />
 					</div>
-					<button className='btn btn-lg btn-outline btn-accent ml-6 my-2'>
+					<button className='btn btn-md tablet:btn-lg btn-outline btn-accent ml-6 my-2'>
 						Let's create something!
 					</button>
 					<div className='text-lg tablet:text-2xl font-lba italic text-secondary desktop:mt-2'>
