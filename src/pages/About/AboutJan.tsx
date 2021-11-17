@@ -21,11 +21,11 @@ interface AboutJanProps {}
 
 const AboutJan: React.FC<AboutJanProps> = () => {
 	return (
-		<div className='min-w-screen min-h-screen pt-20'>
+		<div className='min-w-screen min-h-screen pt-4 tablet:pt-20'>
 			<Slider site={'about'} />
 			<div className='w-screen min-h-screen flex flex-col laptop:flex-row'>
 				<div className='w-screen h-auto laptop:w-1/2 pl-4 desktop:mt-4'>
-					<div className='h-auto text-2xl font-lba italic text-secondary '>
+					<div className='h-auto text-2xl font-lba italic text-secondary pt-2 tablet:pt-0'>
 						<LightUpString content='<h1>' color='tocyan' />
 					</div>
 					<h1 className='h-auto text-5xl tablet:text-6xl text-primary font-jtm ml-2 p-0'>
@@ -74,7 +74,7 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 						<LightUpString content='</button>' color='tocyan' />
 					</div>
 				</div>
-				<div className='w-screen min-h-auto laptop:w-1/2 laptop:h-auto border-0 mb-16 mt-10 laptop:mb-0'>
+				<div className='w-screen min-h-auto laptop:w-1/2 laptop:h-auto border-0 mb-20 tablet:mb-16 mt-10 laptop:mb-0'>
 					<div className='h-auto grid grid-cols-3 desktop:grid-cols-4 gap-y-16 laptop:mt-4 laptop:gap-16 desktop:gap-24 desktop:mt-12 laptop:pr-6'>
 						<IconHover icon={SiHtml5} text='HTML 5' color='html' />
 						<IconHover icon={SiCss3} text='CSS 3' color='css' />

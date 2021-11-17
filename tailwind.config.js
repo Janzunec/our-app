@@ -20,13 +20,17 @@ module.exports = {
 				'1/8': '12.5%'
 			},
 			height: {
-				'navbar': '6.5vh'
+				navbar: '6.5vh'
 			},
 			margin: {
-				about: '400%',
-				skills: '500%',
-				projects: '600%',
-				contact: '700%'
+				aboutLg: '400%',
+				skillsLg: '500%',
+				projectsLg: '600%',
+				contactLg: '700%',
+				aboutSm: '200%',
+				skillsSm: '300%',
+				projectsSm: '400%',
+				contactSm: '500%'
 			},
 			fontFamily: {
 				dc: ['Dancing Script', 'cursive'],
@@ -45,8 +49,8 @@ module.exports = {
 				xl: '1.25rem',
 				'2xl': '1.5rem',
 				'3xl': '1.875rem',
-				'4xl': '2.25rem',
-				'5xl': '3rem',
+				'4xl': '2.5rem',
+				'5xl': '4rem',
 				'6xl': '5rem',
 				'7xl': '6.5rem',
 				'8xl': '7rem',
@@ -56,7 +60,8 @@ module.exports = {
 				'stretch-out': 'cubic-bezier(0, .54, 1, 1.87)'
 			},
 			translate: {
-				nav: '-400%'
+				navLg: '-400%',
+				navSm: '-200%'
 			},
 			animation: {
 				'spin-slow': 'spin 3s linear infinite',
