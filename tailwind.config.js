@@ -13,7 +13,8 @@ module.exports = {
 				html: '#FF5722',
 				css: '#0D73B7',
 				js: '#F7DF1E',
-				php: '#787CB4'
+				php: '#787CB4',
+				spotify: '#1DB954'
 			},
 			stroke: ['hover', 'focus'],
 			width: {
@@ -38,7 +39,9 @@ module.exports = {
 				src: ['Source Code Pro', 'monospace'],
 				jtm: ['JetBrains Mono', 'monospace'],
 				lba: ['La Belle Aurore', 'cursive'],
-				lob: ['Lobster', 'cursive']
+				lob: ['Lobster', 'cursive'],
+				pac: ['Pacifico', 'cursive'],
+				ama: ['Amatic SC', 'cursive']
 			},
 			fontSize: {
 				xs: '.75rem',

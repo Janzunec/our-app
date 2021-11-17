@@ -16,6 +16,7 @@ import {
 } from 'react-icons/si';
 import { IconType } from 'react-icons';
 import Slider from '../../components/Slider';
+import ActivityJan from '../../components/ActivityJan';
 
 interface AboutJanProps {}
 
@@ -37,9 +38,19 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 					<div className='text-lg tablet:text-2xl font-lba italic text-secondary mb-0'>
 						<LightUpString content='</h1>' color='tocyan' />
 					</div>
+					<div className='flex flex-row justify-start items-center gap-4 text-2xl text-secondary'>
+						<span>
+							<LightUpString
+								content='this.activity='
+								color='tocyan'
+							/>
+						</span>
+						<ActivityJan />
+					</div>
 					<div className='text-lg tablet:text-2xl font-lba italic text-secondary mb-0'>
 						<LightUpString content='<p>' color='tocyan' />
 					</div>
+
 					<div className='w-full laptop:w-5/6 text-xl text-white font-extralight flex flex-col justify-items-start text-left gap-8 px-6'>
 						<p>
 							I am a junior Front-End developer currently

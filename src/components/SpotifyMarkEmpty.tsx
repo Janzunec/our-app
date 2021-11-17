@@ -1,32 +1,29 @@
-import * as React from "react";
-import "../spotify.css";
+import * as React from 'react';
+import { FaSpotify } from 'react-icons/fa';
 
 const SpotifyMarkEmpty: React.FC = () => {
-  return (
-    <>
-      <div className="container">
-        <div className="title">
-          <img
-            src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Spotify-256.png"
-            alt="spotify-icon"
-            className="spotify-icon"
-          />
-          <div className="title-name">Spotify</div>
-        </div>
-        <div className="listening-to">
-          <div className="album-art"></div>
-          <div className="track">
-            <div className="song-name">
-              <div className="not-listening">
-                Mark is currently not listening to anything... or an ad
-              </div>
-            </div>
-            <div className="artist"></div>
-          </div>
-        </div>
-      </div>
-    </>
-  );
+	return (
+		<>
+			<div className='font-ama text-4xl border-2 grid grid-cols-2 w-1/3'>
+				<div className='font-pac text-5xl col-span-2 border-2 flex justify-center items-center'>
+					<FaSpotify className='text-6xl border-2 text-spotify' />
+					<div className='border-2'>Spotify</div>
+				</div>
+				<div className='border-2'>
+					<div className='border-2'></div>
+					<div className='border-2'>
+						<div className='border-2'>
+							<div className='border-2'>
+								Mark is currently not listening to anything...
+								or an ad
+							</div>
+						</div>
+						<div className='artist'>asd</div>
+					</div>
+				</div>
+			</div>
+		</>
+	);
 };
 
 export default SpotifyMarkEmpty;

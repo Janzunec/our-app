@@ -18,15 +18,6 @@
 	.invisible {
 		@apply hidden;
 	}
-	.mark:hover {
-		color: white;
-		text-shadow: 0 0 20px white;
-	}
-
-	.name:hover .vrcko {
-		color: black;
-		text-shadow: 0 0 5px black;
-	}
 	.iconText {
 		@apply absolute w-auto p-1 mb-2 min-w-max opacity-0
         rounded-md shadow-md text-white bg-gray-700
@@ -34,6 +25,6 @@
         transition-all duration-200 scale-0 origin-bottom;
 	}
 	.navLink {
-		@apply h-14 flex justify-center items-center tablet:hover:text-secondary transform hover:scale-125 transition-all duration-300;
+		@apply flex items-center justify-center pb-1 font-main text-3xl text-primary laptop:hover:text-secondary transform laptop:hover:scale-125 transition-all duration-300;
 	}
 }
