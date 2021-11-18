@@ -25,7 +25,7 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 		<div className='min-w-screen min-h-screen pt-4 tablet:pt-20'>
 			<Slider site={'about'} />
 			<div className='w-screen min-h-screen flex flex-col laptop:flex-row'>
-				<div className='w-screen h-auto laptop:w-1/2 pl-4 desktop:mt-4'>
+				<div className='w-screen h-auto laptop:w-1/2 pl-4'>
 					<div className='h-auto text-2xl font-lba italic text-secondary pt-2 tablet:pt-0'>
 						<LightUpString content='<h1>' color='tocyan' />
 					</div>
@@ -38,20 +38,11 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 					<div className='text-lg tablet:text-2xl font-lba italic text-secondary mb-0'>
 						<LightUpString content='</h1>' color='tocyan' />
 					</div>
-					<div className='flex flex-row justify-start items-center gap-4 text-2xl text-secondary'>
-						<span>
-							<LightUpString
-								content='this.activity='
-								color='tocyan'
-							/>
-						</span>
-						<ActivityJan />
-					</div>
 					<div className='text-lg tablet:text-2xl font-lba italic text-secondary mb-0'>
 						<LightUpString content='<p>' color='tocyan' />
 					</div>
 
-					<div className='w-full laptop:w-5/6 text-xl text-white font-extralight flex flex-col justify-items-start text-left gap-8 px-6'>
+					<div className='w-full laptop:w-5/6 text-lg text-white font-extralight flex flex-col justify-items-start text-left gap-5 px-6'>
 						<p>
 							I am a junior Front-End developer currently
 							schooling for a computer engineer in Maribor,
@@ -81,11 +72,20 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 					<button className='btn btn-md tablet:btn-lg btn-outline btn-accent ml-6 my-2'>
 						Let's create something!
 					</button>
-					<div className='text-lg tablet:text-2xl font-lba italic text-secondary desktop:mt-2'>
+					<div className='text-lg tablet:text-2xl font-lba italic text-secondary'>
 						<LightUpString content='</button>' color='tocyan' />
 					</div>
+					<div className='flex flex-row justify-center tablet:justify-start items-center tablet:gap-4 text-2xl mt-2 desktop:mt-0 text-secondary'>
+						<span className='hidden tablet:inline'>
+							<LightUpString
+								content='Jan.activity ='
+								color='tocyan'
+							/>
+						</span>
+						<ActivityJan />
+					</div>
 				</div>
-				<div className='w-screen min-h-auto laptop:w-1/2 laptop:h-auto border-0 mb-20 tablet:mb-16 mt-10 laptop:mb-0'>
+				<div className='w-screen min-h-auto laptop:w-1/2 laptop:h-auto border-0 mb-20 tablet:mb-16 mt-14 laptop:mb-0'>
 					<div className='h-auto grid grid-cols-3 desktop:grid-cols-4 gap-y-16 laptop:mt-4 laptop:gap-16 desktop:gap-24 desktop:mt-12 laptop:pr-6'>
 						<IconHover icon={SiHtml5} text='HTML 5' color='html' />
 						<IconHover icon={SiCss3} text='CSS 3' color='css' />
