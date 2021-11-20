@@ -12,7 +12,8 @@ const ActivityJan: React.FC<ActivityJanProps> = () => {
 		revalidateOnFocus: false,
 		refreshWhenHidden: true
 	});
-	const user = `${activity?.discord_user.username}#${activity?.discord_user.discriminator}`;
+	const username = `${activity?.discord_user.username}`;
+	const userTag = `#${activity?.discord_user.discriminator}`;
 	const spotify =
 		activity?.activities[0]?.name === 'Spotify' ? activity?.spotify : '';
 
@@ -23,8 +24,11 @@ const ActivityJan: React.FC<ActivityJanProps> = () => {
 
 	return (
 		<div className=' max-w-activityTable tablet:max-w-lg h-auto flex flex-col'>
-			<div className='w-auto h-10 text-center text-2xl text-primary border-2 border-b-0 border-gray-500 rounded-t-lg'>
-				<LightUpString content={user} color='topurple' />
+			<div className='w-auto h-10 flex flex-row justify-center text-lg text-primary border-2 border-b-0 border-gray-500 rounded-t-lg'>
+				<div className='text-2xl'>
+					<LightUpString content={username} color='topurple' />
+				</div>
+				<LightUpString content={userTag} color='topurple' />
 			</div>
 			{activity?.activities[0] && (
 				<div className='w-full h-22 grid grid-cols-4 border-2 border-gray-500 rounded-b-lg gap-0 text-white'>
@@ -58,7 +62,7 @@ const ActivityJan: React.FC<ActivityJanProps> = () => {
 							)}
 							{firstActivity && firstActivity?.name}
 						</div>
-						<div className='w-auto h-11 flex items-center px-2'>
+						<div className='w-auto h-10 flex items-center px-2'>
 							{spotify && (
 								<div className='  truncate ...'>
 									{spotify?.artist}
@@ -74,7 +78,7 @@ const ActivityJan: React.FC<ActivityJanProps> = () => {
 				</div>
 			)}
 			{!activity?.activities[0] && (
-				<div className='text-white text-center w-full h-12 border-2 rounded-b-lg border-gray-500 px-2'>
+				<div className='text-white text-xl tablet:text-2xl text-center w-full h-12 border-2 rounded-b-lg border-gray-500 px-2'>
 					Currently not at my computer...
 				</div>
 			)}

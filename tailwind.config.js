@@ -53,7 +53,7 @@ module.exports = {
 				'2xl': '1.5rem',
 				'3xl': '1.875rem',
 				'4xl': '2.5rem',
-				'5xl': '4rem',
+				'5xl': '3.6rem',
 				'6xl': '5rem',
 				'7xl': '6.5rem',
 				'8xl': '7rem',
@@ -110,7 +110,7 @@ module.exports = {
 			// => @media (min-width: 1500px) { ... }
 		},
 		maxWidth: {
-			activityTable: '360px'
+			activityTable: '340px'
 		}
 	},
 	variants: {

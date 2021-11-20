@@ -27,16 +27,16 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 			<div className='w-screen min-h-screen flex flex-col laptop:flex-row'>
 				<div className='w-screen h-auto laptop:w-1/2 pl-4'>
 					<div className='h-auto text-2xl font-lba italic text-secondary pt-2 tablet:pt-0'>
-						<LightUpString content='<h1>' color='tocyan' />
+						<LightUpString content='<h2>' color='tocyan' />
 					</div>
-					<h1 className='h-auto text-5xl tablet:text-6xl text-primary font-jtm ml-2 p-0'>
+					<h2 className='h-auto text-5xl tablet:text-6xl text-primary font-jtm ml-2 p-0'>
 						<LightUpString
 							content={`Hi, I'm Jan`}
 							color={'topurple'}
 						/>
-					</h1>
+					</h2>
 					<div className='text-lg tablet:text-2xl font-lba italic text-secondary mb-0'>
-						<LightUpString content='</h1>' color='tocyan' />
+						<LightUpString content='</h2>' color='tocyan' />
 					</div>
 					<div className='text-lg tablet:text-2xl font-lba italic text-secondary mb-0'>
 						<LightUpString content='<p>' color='tocyan' />
