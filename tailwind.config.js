@@ -8,7 +8,7 @@ module.exports = {
 				navbg: '#1c1c1c',
 				mainbg: '#212121',
 				primary: '#00FFFF',
-				secondary: '#793EF9',
+				secondary: '#6a22f8',
 				ternary: '#0A4DC9',
 				html: '#FF5722',
 				css: '#0D73B7',
@@ -94,10 +94,7 @@ module.exports = {
 					transform: 'rotateY(360deg)'
 				}
 			},
-			gridTemplateColumns: {
-				activitysm: 'repeat(20, minmax(0, 1fr))',
-				activitylg: 'repeat(16, minmax(0, 1fr))'
-			}
+			underline: {}
 		},
 		screens: {
 			tablet: '640px',
@@ -125,7 +122,7 @@ module.exports = {
 		themes: [
 			{
 				mytheme: {
-					primary: '#570df8',
+					primary: '#6a22f8',
 					'primary-focus': '#4506cb',
 					'primary-content': '#212121',
 					secondary: '#f000b8',
@@ -134,7 +131,7 @@ module.exports = {
 					accent: '#00ffff',
 					'accent-focus': '#00ffff',
 					'accent-content': '#212121',
-					neutral: '#212121',
+					neutral: '#000',
 					'neutral-focus': '#2a2e37',
 					'neutral-content': '#212121',
 					'base-100': '#212121',

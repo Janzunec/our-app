@@ -87,56 +87,93 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 				</div>
 				<div className='w-screen min-h-auto laptop:w-1/2 laptop:h-auto border-0 mb-20 tablet:mb-16 mt-14 laptop:mb-0'>
 					<div className='h-auto grid grid-cols-3 desktop:grid-cols-4 gap-y-16 laptop:mt-4 laptop:gap-16 desktop:gap-24 desktop:mt-12 laptop:pr-6'>
-						<IconHover icon={SiHtml5} text='HTML 5' color='html' />
-						<IconHover icon={SiCss3} text='CSS 3' color='css' />
-						<IconHover
-							icon={SiJavascript}
-							text='JavaScript'
-							color='js'
-						/>
-						<IconHover
-							icon={SiTypescript}
-							text='TypeScript'
-							color='blue-700'
-						/>
-						<IconHover
-							icon={SiReact}
-							text='ReactJS'
-							color='primary'
-							animation='slow'
-						/>
-						<IconHover
-							icon={SiTailwindcss}
-							text='Tailwid CSS'
-							color='primary'
-						/>
-						<IconHover
-							icon={SiThreedotjs}
-							text='Three.js'
-							color='gray-200'
-						/>
-						<IconHover
-							icon={SiVisualstudiocode}
-							text='Visual Studio Code'
-							color='blue-500'
-						/>
-						<IconHover
-							icon={SiMysql}
-							text='MySQL'
-							color='blue-900'
-						/>
-						<IconHover icon={SiPhp} text='PHP' color='php' />
-						<IconHover
-							icon={SiCplusplus}
-							text='C++'
-							color='blue-800'
-						/>
-						<IconHover
-							icon={SiPython}
-							text='Python'
-							color='yellow-300'
-							animation='slow'
-						/>
+						<a
+							href='https://www.w3schools.com/html/'
+							target='blank'
+						>
+							<IconHover
+								icon={SiHtml5}
+								text='HTML 5'
+								color='html'
+							/>
+						</a>
+						<a href='https://www.w3schools.com/css/' target='blank'>
+							<IconHover icon={SiCss3} text='CSS 3' color='css' />
+						</a>
+						<a href='https://www.javascript.com/' target='blank'>
+							<IconHover
+								icon={SiJavascript}
+								text='JavaScript'
+								color='js'
+							/>
+						</a>
+						<a
+							href='https://www.typescriptlang.org/'
+							target='blank'
+						>
+							<IconHover
+								icon={SiTypescript}
+								text='TypeScript'
+								color='blue-700'
+							/>
+						</a>
+						<a href='https://reactjs.org/' target='blank'>
+							<IconHover
+								icon={SiReact}
+								text='ReactJS'
+								color='primary'
+								animation='slow'
+							/>
+						</a>
+						<a href='https://tailwindcss.com/' target='blank'>
+							<IconHover
+								icon={SiTailwindcss}
+								text='Tailwid CSS'
+								color='primary'
+							/>
+						</a>
+						<a href='https://threejs.org/' target='blank'>
+							<IconHover
+								icon={SiThreedotjs}
+								text='Three.js'
+								color='gray-200'
+							/>
+						</a>
+						<a href='https://code.visualstudio.com/' target='blank'>
+							<IconHover
+								icon={SiVisualstudiocode}
+								text='Visual Studio Code'
+								color='blue-500'
+							/>
+						</a>
+						<a href='https://www.mysql.com/' target='blank'>
+							<IconHover
+								icon={SiMysql}
+								text='MySQL'
+								color='blue-900'
+							/>
+						</a>
+						<a href='https://www.php.net/' target='blank'>
+							<IconHover icon={SiPhp} text='PHP' color='php' />
+						</a>
+						<a
+							href='https://www.w3schools.com/CPP/default.asp'
+							target='blank'
+						>
+							<IconHover
+								icon={SiCplusplus}
+								text='C++'
+								color='blue-800'
+							/>
+						</a>
+						<a href='https://www.python.org/' target='blank'>
+							<IconHover
+								icon={SiPython}
+								text='Python'
+								color='yellow-300'
+								animation='slow'
+							/>
+						</a>
 					</div>
 				</div>
 			</div>

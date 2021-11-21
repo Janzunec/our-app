@@ -1,5 +1,6 @@
+import { Console } from 'console';
 import React from 'react';
-import { useLanyard } from 'use-lanyard';
+import { Activity, useLanyard } from 'use-lanyard';
 import { DiscordUser as DiscordUserType } from 'use-lanyard';
 import { Spotify as SpotifyType } from 'use-lanyard';
 import LightUpString from './LightUpString';
@@ -17,8 +18,20 @@ const ActivityJan: React.FC<ActivityJanProps> = () => {
 	const spotify =
 		activity?.activities[0]?.name === 'Spotify' ? activity?.spotify : '';
 
-	const firstActivity =
-		activity?.activities[0]?.name !== 'Spotify'
+	// let visualStudio: Activity;
+	// activity?.activities.forEach((act: Activity) => {
+	// 	console.log(act);
+	// 	if (act.name === 'Visual Studio Code') visualStudio = act;
+	// });
+
+	const visualStudio =
+		activity?.activities[0]?.name === 'Visual Studio Code'
+			? activity?.activities[0]
+			: '';
+
+	const otherApps =
+		activity?.activities[0]?.name !== 'Spotify' &&
+		activity?.activities[0]?.name !== 'Visual Studio Code'
 			? activity?.activities[0]
 			: '';
 
@@ -40,10 +53,10 @@ const ActivityJan: React.FC<ActivityJanProps> = () => {
 								className='w-22 h-22 rounded-bl-lg  cursor-help'
 							/>
 						)}
-						{firstActivity && (
+						{visualStudio && (
 							<img
-								src={`https://cdn.discordapp.com/app-assets/${firstActivity.application_id}/${firstActivity.assets?.large_image}.png`}
-								title={firstActivity.assets?.large_text}
+								src={`https://cdn.discordapp.com/app-assets/${visualStudio.application_id}/${visualStudio.assets?.large_image}.png`}
+								title={visualStudio.assets?.large_text}
 								className='w-22 h-22 rounded-bl-lg  cursor-help'
 							/>
 						)}
@@ -60,7 +73,12 @@ const ActivityJan: React.FC<ActivityJanProps> = () => {
 									</a>
 								</div>
 							)}
-							{firstActivity && firstActivity?.name}
+							{visualStudio && visualStudio?.name}
+							{otherApps && (
+								<div className='  truncate ...'>
+									{otherApps?.name}
+								</div>
+							)}
 						</div>
 						<div className='w-auto h-10 flex items-center px-2'>
 							{spotify && (
@@ -68,9 +86,14 @@ const ActivityJan: React.FC<ActivityJanProps> = () => {
 									{spotify?.artist}
 								</div>
 							)}
-							{firstActivity && (
+							{visualStudio && (
 								<div className='  truncate ...'>
-									{firstActivity?.details}
+									{visualStudio?.details}
+								</div>
+							)}
+							{otherApps && (
+								<div className=' truncate ... '>
+									{otherApps.state}
 								</div>
 							)}
 						</div>
