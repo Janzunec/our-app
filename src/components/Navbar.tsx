@@ -19,7 +19,7 @@ const Navbar: React.FC = () => {
 			>
 				JM
 			</Link>
-			<ul className='w-screen tablet:w-2/3 laptop:w-1/2 text-primary text-3xl laptop:text-3xl font-main grid grid-cols-5 tablet:grid-cols-4 border-0 pt-2 px-0 m-0'>
+			<ul className='w-screen tablet:w-2/3 laptop:w-1/2 text-primary text-3xl laptop:text-3xl font-main grid grid-cols-5 tablet:grid-cols-4 border-0 py-3 px-0 m-0'>
 				<Link to='/' className='navLink tablet:hidden'>
 					<AiOutlineHome
 						className={`${
@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
 					/>
 					<span className='hidden tablet:inline-block'>skills</span>
 				</Link>
-				<Link to='/projects' className='navLink'>
+				<Link to={`/projects/${first}`} className='navLink'>
 					<VscFolderActive
 						className={`${
 							pathname.includes('projects')
@@ -72,7 +72,7 @@ const Navbar: React.FC = () => {
 					/>
 					<span className='hidden tablet:inline-block'>projects</span>
 				</Link>
-				<Link to='/contact' className='navLink'>
+				<Link to={`/contact/${first}`} className='navLink'>
 					<RiContactsBookLine
 						className={`${
 							pathname.includes('contact')
@@ -90,7 +90,7 @@ const Navbar: React.FC = () => {
 					<span className='hidden tablet:inline-block'>contact</span>
 				</Link>
 				<hr
-					className={`h-1 w-full hidden tablet:block bg-primary border-0 mt-2 transition-all duration-300 transform translate-x-navSm laptop:translate-x-navLg ${
+					className={`h-1 w-full hidden tablet:block bg-primary border-0 mt-1 transition-all duration-300 transform translate-x-navSm laptop:translate-x-navLg ${
 						pathname.includes('about')
 							? ' tablet:ml-aboutSm laptop:ml-aboutLg'
 							: ''

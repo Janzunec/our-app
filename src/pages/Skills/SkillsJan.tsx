@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from '../../components/Slider';
 import LightUpString from '../../components/LightUpString';
+import { Link } from 'react-router-dom';
 
 interface SkillsJanProps {}
 
@@ -10,7 +11,7 @@ const SkillsJan: React.FC<SkillsJanProps> = () => {
 			<div className='flex justify-center items-center'>
 				<Slider site='skills' />
 			</div>
-			<div className='w-screen min-h-screen flex flex-col laptop:flex-row pb-10'>
+			<div className='w-screen min-h-screen flex flex-col laptop:flex-row pb-16'>
 				<div className='w-screen h-auto laptop:w-1/2 pl-4'>
 					<div className='h-auto text-2xl font-lba italic text-secondary pt-2 tablet:pt-0'>
 						<LightUpString content='<h2>' color='tocyan' />
@@ -57,6 +58,15 @@ const SkillsJan: React.FC<SkillsJanProps> = () => {
 							have some Full-stack experience working with
 							Node.JS, PHP and some other programming languages
 							like C++ and Python.
+						</p>
+						<p>
+							Interested in working with me?{' '}
+							<Link
+								to='/contact'
+								className='text-primary transform duration-150 hover:text-secondary '
+							>
+								Contact me!
+							</Link>
 						</p>
 					</div>
 					<div className='text-lg tablet:text-2xl font-lba italic text-secondary desktop:mt-2'>
