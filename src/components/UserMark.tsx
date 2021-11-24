@@ -16,9 +16,18 @@ const UserMark: React.FC<UserMarkProps> = ({ user }) => {
 
   return (
     <div className="min-w-screen flex flex-col items-center text-3xl">
-      <div className="pl-10 flex flex-row w-screen  border-2 border-gray-600 rounded-3xl">
-        <div className="text-4xl">{user?.username}</div>
-        {"#" + user?.discriminator}
+      <div className="justify-center items-center py-3 flex flex-row w-screen  border-4 border-gray-600 rounded-3xl bg-gradient-to-br from-transparent to-darkblue">
+        <div className="text-4xl ml-2">{user?.username}</div>
+        <div className="mb-4">{"#" + user?.discriminator}</div>
+        <img
+          alt="pfp"
+          src={
+            "https://cdn.discordapp.com/avatars/290867016468791297/" +
+            user?.avatar +
+            ".jpg"
+          }
+          className="w-auto h-20 ml-2 border-4 border-gray-500 rounded-2xl"
+        ></img>
       </div>
       <Custom custom={activity?.activities[0] ?? undefined} />
     </div>

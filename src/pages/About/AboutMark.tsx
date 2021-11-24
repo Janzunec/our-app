@@ -18,9 +18,18 @@ const AboutMark: React.FC<AboutMarkProps> = () => {
     <div className="min-w-screen min-h-screen pt-4 tablet:pt-20">
       <Slider site={"about"} />
 
-      <div className=" mt-7 w-screen flex flex-col text-white font-shi border-2 border-gray-600">
+      <div className=" mt-7 w-screen flex flex-col text-white font-shi">
         <UserMark user={activity?.discord_user ?? undefined} />
-        {/* <SpotifyMark spotify={activity?.spotify ?? undefined} /> */}
+
+        <div className=" text-3xl flex flex-col font-dc mt-8">
+          <div className="w-min h-20 text-6xl">"</div>
+          <div className="pl-4">
+            The more I learn, the more I realize how much I don't know.
+          </div>
+          <div className="w-min h-20 text-6xl">"</div>
+        </div>
+
+        <SpotifyMark spotify={activity?.spotify ?? undefined} />
       </div>
     </div>
   );
