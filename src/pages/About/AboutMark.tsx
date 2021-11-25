@@ -4,6 +4,7 @@ import LightUpString from "../../components/LightUpString";
 import { useLanyard } from "use-lanyard";
 import SpotifyMark from "../../components/SpotifyMark";
 import UserMark from "../../components/UserMark";
+import ActivityMark from "../../components/ActivityMark";
 
 interface AboutMarkProps {}
 
@@ -20,6 +21,8 @@ const AboutMark: React.FC<AboutMarkProps> = () => {
 
       <div className=" mt-7 w-screen flex flex-col text-white font-shi">
         <UserMark user={activity?.discord_user ?? undefined} />
+
+        <ActivityMark activity={activity?.activities[2] ?? undefined} />
 
         <div className=" text-3xl flex flex-col font-dc mt-8">
           <div className="w-min h-20 text-6xl">"</div>
