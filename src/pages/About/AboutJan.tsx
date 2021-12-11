@@ -17,12 +17,13 @@ import {
 import { IconType } from 'react-icons';
 import Slider from '../../components/Slider';
 import ActivityJan from '../../components/ActivityJan';
+import { Link } from 'react-router-dom';
 
 interface AboutJanProps {}
 
 const AboutJan: React.FC<AboutJanProps> = () => {
 	return (
-		<div className='min-w-screen min-h-screen pt-4 tablet:pt-20'>
+		<div className='min-w-screen min-h-screen pt-4 tablet:pt-20 mb-4'>
 			<Slider site={'about'} />
 			<div className='w-screen min-h-screen flex flex-col laptop:flex-row'>
 				<div className='w-screen h-auto laptop:w-1/2 pl-4'>
@@ -69,10 +70,12 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 					<div className='text-lg tablet:text-2xl font-lba italic text-secondary desktop:mt-2'>
 						<LightUpString content='<button>' color='tocyan' />
 					</div>
-					<button className='btn btn-md tablet:btn-lg btn-outline btn-accent ml-6 my-2'>
-						Let's create something!
-					</button>
-					<div className='text-lg tablet:text-2xl font-lba italic text-secondary'>
+					<Link to='/contact/Jan'>
+						<button className='btn btn-md tablet:btn-lg btn-outline btn-accent ml-6'>
+							Let's create something!
+						</button>
+					</Link>
+					<div className='text-lg tablet:text-2xl font-lba italic text-secondary mt-2'>
 						<LightUpString content='</button>' color='tocyan' />
 					</div>
 					<div className='flex flex-row justify-center tablet:justify-start items-center tablet:gap-4 text-2xl mt-2 desktop:mt-0 text-secondary'>

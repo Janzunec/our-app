@@ -62,7 +62,7 @@ const SkillsJan: React.FC<SkillsJanProps> = () => {
 						<p>
 							Interested in working with me?{' '}
 							<Link
-								to='/contact'
+								to='/contact/Jan'
 								className='text-primary transform duration-150 hover:text-secondary '
 							>
 								Contact me!
