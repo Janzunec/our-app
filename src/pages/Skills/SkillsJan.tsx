@@ -2,6 +2,7 @@ import React from 'react';
 import Slider from '../../components/Slider';
 import LightUpString from '../../components/LightUpString';
 import { Link } from 'react-router-dom';
+import ChartJan from '../../components/chartJan';
 
 interface SkillsJanProps {}
 
@@ -74,6 +75,7 @@ const SkillsJan: React.FC<SkillsJanProps> = () => {
 					</div>
 				</div>
 				<div className='w-screen h-auto laptop:w-1/2 flex items-center border-0'>
+					{/* <ChartJan /> */}
 					<div className='p-6 w-full space-y-2 artboard laptop:w-5/6 laptop:h-2/3'>
 						<div className='w-full flex flex-col justify-start'>
 							<div className='text-2xl text-secondary p-2 '>
