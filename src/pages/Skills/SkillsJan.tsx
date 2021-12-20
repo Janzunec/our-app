@@ -75,8 +75,8 @@ const SkillsJan: React.FC<SkillsJanProps> = () => {
 					</div>
 				</div>
 				<div className='w-screen h-auto laptop:w-1/2 flex items-center border-0'>
-					{/* <ChartJan /> */}
-					<div className='p-6 w-full space-y-2 artboard laptop:w-5/6 laptop:h-2/3'>
+					<ChartJan />
+					{/* <div className='p-6 w-full space-y-2 artboard laptop:w-5/6 laptop:h-2/3'>
 						<div className='w-full flex flex-col justify-start'>
 							<div className='text-2xl text-secondary p-2 '>
 								<LightUpString
@@ -129,7 +129,7 @@ const SkillsJan: React.FC<SkillsJanProps> = () => {
 								max='100'
 							></progress>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>

@@ -5,15 +5,15 @@ import { Bar } from 'react-chartjs-2';
 interface ChartJanProps {}
 
 const ChartJan: React.FC<ChartJanProps> = () => {
-	const state = {
-		labels: ['January', 'February', 'March', 'April'],
+	const data = {
+		labels: ['HTML & CSS', 'JavaScript', 'React', 'Back-End'],
 		datasets: [
 			{
 				label: 'Skills',
+				data: [65, 59, 80, 81],
 				backgroundColor: 'rgba(75,192,192,1)',
 				borderColor: 'rgba(0,0,0,1)',
-				borderWidth: 2,
-				data: [65, 59, 80, 81]
+				borderWidth: 1
 			}
 		]
 	};
@@ -53,16 +53,21 @@ const ChartJan: React.FC<ChartJanProps> = () => {
 
 	return (
 		<div>
-			{/* <Bar
-				data={state}
+			<Bar
+				data={data}
 				options={{
-					scales: {
-						y: {
-							beginAtZero: true
+					plugins: {
+						title: {
+							display: true,
+							text: 'Skills'
+						},
+						legend: {
+							display: true,
+							position: 'top'
 						}
 					}
 				}}
-			/> */}
+			/>
 		</div>
 	);
 };
