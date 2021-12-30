@@ -54,9 +54,8 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 						<p>
 							I am a well-organised, problem-solving, hard-working
 							person who always insists to be on time and gets the
-							job done. I love programming and when I'm not at my
-							desk, I am in school or riding Downhill at Bike Park
-							Pohorje.
+							job done. I love programming and while I'm not at my
+							desk, I am in school or at the gym.
 						</p>
 						<p>
 							Am interested in all Front-end technologies, always
