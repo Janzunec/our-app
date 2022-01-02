@@ -110,7 +110,7 @@ module.exports = {
 			// => @media (min-width: 1500px) { ... }
 		},
 		maxWidth: {
-			activityTable: '340px'
+			activityTable: '330px'
 		}
 	},
 	variants: {
