@@ -7,10 +7,10 @@
 		@apply min-h-screen w-screen overflow-x-hidden bg-mainbg cursor-default desktop:overflow-hidden;
 	}
 	.topurple {
-		@apply hover:text-secondary transition-all duration-150 transform-gpu;
+		@apply text-primary hover:text-secondary transition-all duration-150 transform-gpu;
 	}
 	.tocyan {
-		@apply hover:text-primary transition-all duration-150 ease-stretch-out transform-gpu;
+		@apply text-secondary hover:text-primary transition-all duration-150 ease-stretch-out transform-gpu;
 	}
 	.threeBack {
 		@apply border-0 top-0 relative w-screen h-10 z-0 flex justify-center items-center align-middle text-center laptop:fixed laptop:top-20 laptop:-right-64;
