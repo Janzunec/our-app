@@ -13,14 +13,14 @@ const ProjectsJan: React.FC<ProjectsJanProps> = () => {
 			<div className='w-screen h-auto grid grid-cols-3 justify-items-center items-center align-top gap-10 p-10'>
 				<div className=' w-4/5 border-2 h-56'>
 					<img
-						src='.public/img/revolucijaVodenja.png'
+						src='../../img/revolucijaVodenja.png'
 						alt='Revolucija vodenja'
 						// className='h-full w-full'
 					/>
 				</div>
 				<div className=' w-4/5 border-2 h-56'>
 					<img
-						src='./public/img/zunecdevml.png'
+						src='./src/img/zunecdevml.png'
 						alt='zunecdev.ml'
 						// className='h-full w-full'
 					/>
