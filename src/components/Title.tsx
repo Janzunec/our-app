@@ -9,7 +9,7 @@ export default function Title() {
 	}"];`;
 
 	return (
-		<div className='w-screen h-auto laptop:h-screen text-left flex flex-col tablet:pl-8 border-0 pt-4 tablet:pt-20 gap-4 pl-4 z-10'>
+		<div className='w-screen h-auto laptop:h-screen text-left flex flex-col tablet:pl-8 border-0 pt-4 tablet:pt-20 gap-4 pl-4 z-10 animate-fade-in'>
 			<div className='text-lg tablet:text-xl laptop:text-2xl font-lba italic text-secondary'>
 				<LightUpString content='<script>' color='tocyan' />
 			</div>

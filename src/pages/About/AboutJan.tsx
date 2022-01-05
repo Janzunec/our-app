@@ -25,7 +25,7 @@ const AboutJan: React.FC<AboutJanProps> = () => {
 	return (
 		<div className='min-w-screen min-h-screen pt-4 tablet:pt-20 mb-4'>
 			<Slider site={'about'} />
-			<div className='w-screen min-h-screen flex flex-col laptop:flex-row'>
+			<div className='w-screen min-h-screen flex flex-col laptop:flex-row animate-fade-in'>
 				<div className='w-screen h-auto laptop:w-1/2 pl-4'>
 					<div className='h-auto text-2xl font-lba italic text-secondary pt-2 tablet:pt-0'>
 						<LightUpString content='<h2>' color='tocyan' />

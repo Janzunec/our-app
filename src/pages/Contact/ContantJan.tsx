@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from '../../components/Slider';
 import LightUpString from '../../components/LightUpString';
+import { IoLogoInstagram } from 'react-icons/io';
 
 interface ContactJanProps {}
 
@@ -10,11 +11,11 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 		console.log(name);
 	};
 	return (
-		<div className=' w-screen pt-4 tablet:pt-20'>
+		<div className=' w-screen pt-4 tablet:pt-20 '>
 			<div className='flex justify-center items-center'>
 				<Slider site='contact' />
 			</div>
-			<div className='w-screen min-h-screen flex flex-col laptop:flex-row pb-16'>
+			<div className='w-screen min-h-screen flex flex-col laptop:flex-row pb-16 animate-fade-in'>
 				<div className='w-screen h-auto laptop:w-1/2 pl-4'>
 					<div className='font-lba text-2xl'>
 						<LightUpString content='<h2>' color='tocyan' />
@@ -43,12 +44,14 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 					<div className='font-lba text-2xl'>
 						<LightUpString content='<ul>' color='tocyan' />
 					</div>
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
+					<ul className=' text-3xl'>
+						<li>
+							<IoLogoInstagram className=' inline-block text-4xl' />
+							&nbsp;janzunec
+						</li>
+						<li>Linkedin: Jan Zunec</li>
+						<li>Github: Janzunec</li>
+						<li>Twitter: Janzunec</li>
 					</ul>
 					<div className='font-lba text-2xl'>
 						<LightUpString content='</ul>' color='tocyan' />

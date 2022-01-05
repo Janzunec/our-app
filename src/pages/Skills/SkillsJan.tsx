@@ -12,7 +12,7 @@ const SkillsJan: React.FC<SkillsJanProps> = () => {
 			<div className='flex justify-center items-center'>
 				<Slider site='skills' />
 			</div>
-			<div className='w-screen min-h-screen flex flex-col laptop:flex-row pb-16'>
+			<div className='w-screen min-h-screen flex flex-col laptop:flex-row pb-16 animate-fade-in'>
 				<div className='w-screen h-auto laptop:w-1/2 pl-4'>
 					<div className='h-auto text-2xl font-lba italic text-secondary pt-2 tablet:pt-0'>
 						<LightUpString content='<h2>' color='tocyan' />

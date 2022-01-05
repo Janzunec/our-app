@@ -70,7 +70,9 @@ module.exports = {
 			},
 			animation: {
 				'spin-slow': 'spin 3s linear infinite',
-				'spin-slowY': 'rotateY-slow 4s linear infinite'
+				'spin-slowY': 'rotateY-slow 4s linear infinite',
+				'fade-in': 'fade-in 1s linear',
+				'slide-left': 'slide-left 500ms ease-out'
 			},
 			boxShadow: {
 				'3xl': '0 0 25px 3px white',
@@ -95,6 +97,26 @@ module.exports = {
 					'-ms-transform': 'rotateY(360deg)',
 					'-o-transform': 'rotateY(360deg)',
 					transform: 'rotateY(360deg)'
+				}
+			},
+			'fade-in': {
+				'0%': {
+					opacity: '0',
+					transform: 'rotateX(-10deg);'
+				},
+				'100%': {
+					opacity: '100',
+					transform: 'rotateX(0);'
+				}
+			},
+			'slide-left': {
+				'0%': {
+					opacity: '0',
+					transform: 'translateX(3rem)'
+				},
+				'100%': {
+					opacity: '100',
+					transform: 'translateX(0)'
 				}
 			},
 			underline: {}
