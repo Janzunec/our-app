@@ -10,7 +10,7 @@ const ProjectsJan: React.FC<ProjectsJanProps> = () => {
 			<div className='flex justify-center items-center'>
 				<Slider site='projects' />
 			</div>
-			<div className='w-screen h-auto grid grid-cols-3 justify-items-center items-center align-top gap-10 p-10'>
+			<div className='w-screen h-auto grid grid-cols-3 justify-items-center items-center align-top gap-10 p-10 animate-fade-in'>
 				<div className=' w-4/5 border-2 h-56'>
 					<img
 						src='../../img/revolucijaVodenja.png'

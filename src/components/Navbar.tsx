@@ -12,7 +12,7 @@ const Navbar: React.FC = () => {
 	const first = Math.floor(Math.random() * 2) === 1 ? 'Jan' : 'Mark';
 
 	return (
-		<nav className=' w-screen h-auto tablet:h-16 justify-between text-2xl bg-transparent flex align-middle text-white min-w-full fixed left-0 bottom-0 border-t-2  tablet:border-t-0 tablet:top-0 tablet:border-b border-gray-600 z-20'>
+		<nav className=' w-screen h-auto tablet:h-16 justify-between text-2xl bg-transparent flex align-middle text-white min-w-full fixed left-0 bottom-0 border-t-2  tablet:border-t-0 tablet:top-0 tablet:border-b border-gray-600 z-30'>
 			<Link
 				to='/'
 				className='hidden w-1/6 laptop:w-1/8 tablet:flex items-center justify-center pb-1 font-lob text-3xl text-secondary hover:text-primary transform hover:scale-125 transition-all duration-300'

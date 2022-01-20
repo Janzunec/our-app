@@ -25,7 +25,6 @@ function App() {
 	return (
 		<div className='h-auto flex'>
 			<Navbar />
-			<ParticlesComp className=' fixed h-screen w-screen' />
 			<Routes>
 				<Route path='/' element={<Home />} />
 				<Route path='/about/Jan' element={<AboutJan />} />
@@ -37,6 +36,7 @@ function App() {
 				<Route path='/contact/Jan' element={<ContactJan />} />
 				<Route path='/contact/Mark' element={<ContactMark />} />
 			</Routes>
+			{/* <ParticlesComp /> */}
 		</div>
 	);
 }

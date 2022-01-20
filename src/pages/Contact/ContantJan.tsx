@@ -2,6 +2,8 @@ import React from 'react';
 import Slider from '../../components/Slider';
 import LightUpString from '../../components/LightUpString';
 import { IoLogoInstagram } from 'react-icons/io';
+import { AiOutlineLinkedin } from 'react-icons/ai';
+import { FiTwitter, FiGithub } from 'react-icons/fi';
 
 interface ContactJanProps {}
 
@@ -49,9 +51,18 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 							<IoLogoInstagram className=' inline-block text-4xl' />
 							&nbsp;janzunec
 						</li>
-						<li>Linkedin: Jan Zunec</li>
-						<li>Github: Janzunec</li>
-						<li>Twitter: Janzunec</li>
+						<li>
+							<AiOutlineLinkedin className=' inline-block text-4xl' />
+							&nbsp;Jan Zunec
+						</li>
+						<li>
+							<FiGithub className=' inline-block text-4xl' />
+							&nbsp;Janzunec
+						</li>
+						<li>
+							<FiTwitter className=' inline-block text-4xl' />
+							&nbsp;Janzunec
+						</li>
 					</ul>
 					<div className='font-lba text-2xl'>
 						<LightUpString content='</ul>' color='tocyan' />
