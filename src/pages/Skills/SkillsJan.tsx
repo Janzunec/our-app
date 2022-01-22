@@ -8,7 +8,7 @@ interface SkillsJanProps {}
 
 const SkillsJan: React.FC<SkillsJanProps> = () => {
 	return (
-		<div className=' w-screen pt-4 tablet:pt-20'>
+		<div className=' w-screen pt-4 tablet:pt-20 z-10'>
 			<div className='flex justify-center items-center'>
 				<Slider site='skills' />
 			</div>

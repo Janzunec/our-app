@@ -6,7 +6,7 @@ interface ProjectsJanProps {}
 
 const ProjectsJan: React.FC<ProjectsJanProps> = () => {
 	return (
-		<div className=' w-screen pt-4 tablet:pt-20 mb-4'>
+		<div className=' w-screen pt-4 tablet:pt-20 mb-4 z-10'>
 			<div className='flex justify-center items-center'>
 				<Slider site='projects' />
 			</div>

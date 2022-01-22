@@ -1,4 +1,4 @@
-import { Sphere } from '@react-three/drei';
+// import { Sphere } from '@react-three/drei';
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import { Mesh, Scene } from 'three';
@@ -9,7 +9,7 @@ const ThreeObj = () => {
 	useEffect(() => {
 		const scene = new THREE.Scene();
 
-		scene.background = new THREE.Color(0x212121);
+		// scene.background = new THREE.Color();
 		const glLoader = new GLTFLoader();
 
 		const loadReactLogo = glLoader.load(
@@ -50,7 +50,9 @@ const ThreeObj = () => {
 					);
 				});
 
-				const renderer = new THREE.WebGLRenderer();
+				const renderer = new THREE.WebGLRenderer({ alpha: true });
+
+				renderer.setClearColor(0x000000, 0); // the default
 
 				renderer.setSize(
 					window.innerWidth / 1.3,

@@ -5,7 +5,7 @@ interface ProjectsMarkProps {}
 
 const ProjectsMark: React.FC<ProjectsMarkProps> = () => {
 	return (
-		<div className=' w-screen pt-4 tablet:pt-20'>
+		<div className=' w-screen pt-4 tablet:pt-20 z-10'>
 			<div className='flex justify-center items-center'>
 				<Slider site='projects' />
 			</div>

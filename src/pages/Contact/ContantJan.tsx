@@ -8,12 +8,43 @@ import { FiTwitter, FiGithub } from 'react-icons/fi';
 interface ContactJanProps {}
 
 const ContactJan: React.FC<ContactJanProps> = () => {
+	const [name, setName] = React.useState('');
+	const [email, setEmail] = React.useState('');
+	const [subject, setSubject] = React.useState('');
+	const [message, setMessage] = React.useState('');
+
 	const validateForm = () => {
-		const name = document.querySelector('.form-name')?.textContent;
-		console.log(name);
+		if (name === '')
+			document
+				?.getElementById('name')
+				?.style.setProperty('border', '2px solid red');
+		if (email === '')
+			document
+				?.getElementById('email')
+				?.style.setProperty('border', '2px solid red');
+		if (subject === '')
+			document
+				?.getElementById('subject')
+				?.style.setProperty('border', '2px solid red');
+		if (message === '')
+			document
+				?.getElementById('message')
+				?.style.setProperty('border', '2px solid red');
+		if (name === '' || email === '' || subject === '' || message === '')
+			return;
+
+		console.log(name, email, subject, message);
+
+		const inputs = ['name', 'email', 'subject', 'message'];
+
+		inputs.forEach((input) => {
+			const el = document?.getElementById(`${input}`);
+			el?.style.setProperty('border', '1px solid #0ff');
+		});
 	};
+
 	return (
-		<div className=' w-screen pt-4 tablet:pt-20 '>
+		<div className=' w-screen pt-4 tablet:pt-20 z-10'>
 			<div className='flex justify-center items-center'>
 				<Slider site='contact' />
 			</div>
@@ -85,7 +116,11 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 								<input
 									type='text'
 									placeholder='Name'
-									className='input input-accent input-bordered w-full text-xl form-name'
+									className='input input-accent input-bordered w-full text-xl '
+									onChange={(event) =>
+										setName(event.target.value)
+									}
+									id='name'
 								/>
 							</div>
 							<div className=' indicator w-full text-white'>
@@ -96,6 +131,10 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 									type='text'
 									placeholder='Email'
 									className='input input-accent input-bordered w-full text-xl form-email'
+									onChange={(event) =>
+										setEmail(event.target.value)
+									}
+									id='email'
 								/>
 							</div>
 						</div>
@@ -107,6 +146,10 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 								type='text'
 								placeholder='Subject'
 								className='input input-accent input-bordered w-full text-xl form-subject'
+								onChange={(event) =>
+									setSubject(event.target.value)
+								}
+								id='subject'
 							/>
 						</div>
 						<div className=' indicator w-full text-white'>
@@ -116,11 +159,16 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 							<textarea
 								placeholder='Message'
 								className='textarea textarea-bordered textarea-accent w-full text-xl h-52 form-message'
+								onChange={(event) =>
+									setMessage(event.target.value)
+								}
+								id='message'
 							/>
 						</div>
 					</div>
 					<button
-						className='btn btn-outline btn-accent mt-8 text-xl form-btn'
+						id='btn-send'
+						className='btn btn-outline btn-accent mt-8 text-xl'
 						onClick={validateForm}
 					>
 						Send Message

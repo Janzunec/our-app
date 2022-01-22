@@ -36,7 +36,7 @@ function App() {
 				<Route path='/contact/Jan' element={<ContactJan />} />
 				<Route path='/contact/Mark' element={<ContactMark />} />
 			</Routes>
-			{/* <ParticlesComp /> */}
+			<ParticlesComp />
 		</div>
 	);
 }
