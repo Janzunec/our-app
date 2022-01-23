@@ -26,11 +26,11 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 					},
 					particles: {
 						number: {
-							value: 150,
-							limit: 200,
+							value: 120,
+							limit: 120,
 							density: {
 								enable: true,
-								value_area: 800
+								value_area: 100
 							}
 						},
 						color: {
@@ -42,11 +42,6 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 								width: 1,
 								color: '#fff'
 							}
-							// image: {
-							// 	src: 'images/github.svg',
-							// 	width: 100,
-							// 	height: 100
-							// }
 						},
 						opacity: {
 							value: 2,
@@ -63,23 +58,23 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 							random: true,
 							anim: {
 								enable: true,
-								speed: 10,
+								speed: 8,
 								size_min: 2,
 								sync: false
 							}
 						},
 						line_linked: {
 							enable: true,
-							distance: 100,
+							distance: 120,
 							color: '#fff',
-							opacity: 1.2,
+							opacity: 1.4,
 							width: 1
 						},
 						move: {
 							enable: true,
-							speed: 2,
+							speed: 1.5,
 							direction: 'none',
-							random: false,
+							random: true,
 							straight: false,
 							out_mode: 'out',
 							bounce: false
@@ -95,7 +90,7 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 									b: 23
 								}
 							},
-							opacity: 2
+							opacity: 5
 						}
 					},
 					retina_detect: true,

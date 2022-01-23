@@ -116,7 +116,7 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 								<input
 									type='text'
 									placeholder='Name'
-									className='input input-accent input-bordered w-full text-xl '
+									className='input input-accent input-bordered w-full text-xl bg-transparent'
 									onChange={(event) =>
 										setName(event.target.value)
 									}
@@ -130,7 +130,7 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 								<input
 									type='text'
 									placeholder='Email'
-									className='input input-accent input-bordered w-full text-xl form-email'
+									className='input input-accent input-bordered w-full text-xl form-email bg-transparent'
 									onChange={(event) =>
 										setEmail(event.target.value)
 									}
@@ -145,7 +145,7 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 							<input
 								type='text'
 								placeholder='Subject'
-								className='input input-accent input-bordered w-full text-xl form-subject'
+								className='input input-accent input-bordered w-full text-xl form-subject bg-transparent'
 								onChange={(event) =>
 									setSubject(event.target.value)
 								}
@@ -158,7 +158,7 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 							</div>
 							<textarea
 								placeholder='Message'
-								className='textarea textarea-bordered textarea-accent w-full text-xl h-52 form-message'
+								className='textarea textarea-bordered textarea-accent w-full text-xl h-52 form-message bg-transparent'
 								onChange={(event) =>
 									setMessage(event.target.value)
 								}
