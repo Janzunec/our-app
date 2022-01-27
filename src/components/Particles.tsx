@@ -40,8 +40,8 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 					},
 					particles: {
 						number: {
-							value: 120,
-							limit: 120,
+							value: 110,
+							limit: 110,
 							density: {
 								enable: densityState,
 								value_area: densityValue,
@@ -69,13 +69,13 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 						// },
 						size: {
 							value: 1,
-							random: true,
-							anim: {
-								enable: true,
-								speed: 7,
-								size_min: 1,
-								sync: false,
-							},
+							// random: true,
+							// anim: {
+							// 	enable: true,
+							// 	speed: 7,
+							// 	size_min: 1,
+							// 	sync: false,
+							// },
 						},
 						line_linked: {
 							enable: true,
