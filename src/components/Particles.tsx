@@ -57,16 +57,16 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 								color: '#383838',
 							},
 						},
-						opacity: {
-							value: 1,
-							random: true,
-							anim: {
-								enable: true,
-								speed: 1,
-								opacity_min: 1,
-								sync: false,
-							},
-						},
+						// opacity: {
+						// 	value: 1,
+						// 	random: true,
+						// 	anim: {
+						// 		enable: true,
+						// 		speed: 1,
+						// 		opacity_min: 1,
+						// 		sync: false,
+						// 	},
+						// },
 						size: {
 							value: 1,
 							random: true,
@@ -94,7 +94,6 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 							bounce: false,
 						},
 					},
-					retina_detect: true,
 					fps_limit: fpsLimit,
 					pauseOnOutsideViewport: true,
 				}}
