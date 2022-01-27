@@ -16,10 +16,14 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 
 	let densityState = false;
 	let densityValue = 800;
+	let fpsLimit = 30;
 	window.addEventListener('resize', () => {
-		if (window.innerWidth < 800) densityState = true;
-		else {
+		if (window.innerWidth < 800) {
+			densityState = true;
+			fpsLimit = 60;
+		} else {
 			densityState = false;
+			fpsLimit = 30;
 		}
 	});
 	return (
@@ -88,7 +92,7 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 						},
 					},
 					retina_detect: true,
-					fps_limit: 50,
+					fps_limit: fpsLimit,
 					pauseOnOutsideViewport: true,
 				}}
 				className=" w-screen h-screen fixed z-0"
