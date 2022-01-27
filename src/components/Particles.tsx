@@ -14,6 +14,14 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 	// 	console.log(container);
 	// };
 
+	let densityState = false;
+	let densityValue = 800;
+	window.addEventListener('resize', () => {
+		if (window.innerWidth < 800) densityState = true;
+		else {
+			densityState = false;
+		}
+	});
 	return (
 		<div>
 			<Particles
@@ -28,27 +36,27 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 							value: 120,
 							limit: 120,
 							density: {
-								enable: true,
-								value_area: 100,
+								enable: densityState,
+								value_area: densityValue,
 							},
 						},
 						color: {
-							value: '#444',
+							value: '#383838',
 						},
 						shape: {
 							type: 'circle',
 							stroke: {
 								width: 1,
-								color: '#444',
+								color: '#383838',
 							},
 						},
 						opacity: {
-							value: 2,
+							value: 1,
 							random: true,
 							anim: {
 								enable: true,
 								speed: 1,
-								opacity_min: 2,
+								opacity_min: 1,
 								sync: false,
 							},
 						},
@@ -57,21 +65,21 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 							random: true,
 							anim: {
 								enable: true,
-								speed: 8,
+								speed: 7,
 								size_min: 2,
 								sync: false,
 							},
 						},
 						line_linked: {
 							enable: true,
-							distance: 120,
-							color: '#444',
+							distance: 110,
+							color: '#383838',
 							opacity: 1.4,
 							width: 1,
 						},
 						move: {
 							enable: true,
-							speed: 1.5,
+							speed: 1.4,
 							direction: 'none',
 							random: true,
 							straight: false,
@@ -80,7 +88,8 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 						},
 					},
 					retina_detect: true,
-					fps_limit: 30,
+					fps_limit: 50,
+					pauseOnOutsideViewport: true,
 				}}
 				className=" w-screen h-screen fixed z-0"
 			/>
