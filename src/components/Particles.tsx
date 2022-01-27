@@ -17,11 +17,11 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 	return (
 		<div>
 			<Particles
-				id='tsparticles'
+				id="tsparticles"
 				options={{
 					fullScreen: {
 						enable: true,
-						zIndex: -1
+						zIndex: -1,
 					},
 					particles: {
 						number: {
@@ -29,18 +29,18 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 							limit: 120,
 							density: {
 								enable: true,
-								value_area: 100
-							}
+								value_area: 100,
+							},
 						},
 						color: {
-							value: '#fff'
+							value: '#444',
 						},
 						shape: {
 							type: 'circle',
 							stroke: {
 								width: 1,
-								color: '#fff'
-							}
+								color: '#444',
+							},
 						},
 						opacity: {
 							value: 2,
@@ -49,8 +49,8 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 								enable: true,
 								speed: 1,
 								opacity_min: 2,
-								sync: false
-							}
+								sync: false,
+							},
 						},
 						size: {
 							value: 2,
@@ -59,15 +59,15 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 								enable: true,
 								speed: 8,
 								size_min: 2,
-								sync: false
-							}
+								sync: false,
+							},
 						},
 						line_linked: {
 							enable: true,
 							distance: 120,
-							color: '#fff',
+							color: '#444',
 							opacity: 1.4,
-							width: 1
+							width: 1,
 						},
 						move: {
 							enable: true,
@@ -76,26 +76,13 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 							random: true,
 							straight: false,
 							out_mode: 'out',
-							bounce: false
-						}
-					},
-					backgroundMask: {
-						enable: true,
-						cover: {
-							color: {
-								value: {
-									r: 23,
-									g: 23,
-									b: 23
-								}
-							},
-							opacity: 5
-						}
+							bounce: false,
+						},
 					},
 					retina_detect: true,
-					fps_limit: 60
+					fps_limit: 30,
 				}}
-				className=' w-screen h-screen fixed z-0'
+				className=" w-screen h-screen fixed z-0"
 			/>
 		</div>
 	);
