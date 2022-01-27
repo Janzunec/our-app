@@ -17,7 +17,8 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 	let densityState = false;
 	let densityValue = 800;
 	let fpsLimit = 30;
-	window.addEventListener('resize', () => {
+
+	const checkWindowSize = () => {
 		if (window.innerWidth < 800) {
 			densityState = true;
 			fpsLimit = 60;
@@ -25,7 +26,9 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 			densityState = false;
 			fpsLimit = 30;
 		}
-	});
+	};
+
+	window.addEventListener('resize', checkWindowSize);
 	return (
 		<div>
 			<Particles
@@ -65,12 +68,12 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 							},
 						},
 						size: {
-							value: 2,
+							value: 1,
 							random: true,
 							anim: {
 								enable: true,
 								speed: 7,
-								size_min: 2,
+								size_min: 1,
 								sync: false,
 							},
 						},
@@ -78,7 +81,7 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 							enable: true,
 							distance: 110,
 							color: '#383838',
-							opacity: 1.4,
+							opacity: 1,
 							width: 1,
 						},
 						move: {
