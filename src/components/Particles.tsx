@@ -17,15 +17,15 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 	// let densityState = false;
 	// let densityValue = 800;
 
-	let particlesNum = 120;
+	let particlesLimit;
 
 	const checkWindowSize = () => {
 		if (window.innerWidth < 800) {
 			// densityState = true;
-			particlesNum = 30;
+			particlesLimit = 20;
 		} else {
 			// densityState = false;
-			particlesNum = 120;
+			particlesLimit = 50;
 		}
 	};
 
@@ -91,12 +91,12 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 					// 		// bounce: false,
 					// 	},
 					// },
-					fps_limit: 50,
 					// pauseOnOutsideViewport: true,
 					// autoPlay: true,
+					fps_limit: 50,
 					particles: {
 						number: {
-							limit: 50,
+							limit: particlesLimit,
 						},
 						color: {
 							value: '#383838',
