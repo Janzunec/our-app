@@ -7,7 +7,7 @@ export default function Home() {
 	return (
 		<>
 			<Title />
-			{/* <ThreeObj /> */}
+			<ThreeObj />
 		</>
 	);
 }
