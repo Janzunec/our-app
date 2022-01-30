@@ -91,12 +91,12 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 					// 		// bounce: false,
 					// 	},
 					// },
-					fps_limit: 60,
+					fps_limit: 50,
 					// pauseOnOutsideViewport: true,
 					// autoPlay: true,
 					particles: {
 						number: {
-							limit: 60,
+							limit: 50,
 						},
 						color: {
 							value: '#383838',
@@ -104,7 +104,7 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 						links: {
 							enable: true,
 							color: '#383838',
-							distance: 150,
+							distance: 160,
 						},
 						move: {
 							enable: true,
