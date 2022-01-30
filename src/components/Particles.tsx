@@ -4,27 +4,12 @@ import Particles from 'react-tsparticles';
 interface ParticlesCompProps {}
 
 const ParticlesComp: React.FC<ParticlesCompProps> = () => {
-	// const particlesInit = (main: Engine) => {
-	// 	console.log(main);
-
-	// 	// you can initialize the tsParticles instance (main) here, adding custom shapes or presets
-	// };
-
-	// const particlesLoaded = (container: Container) => {
-	// 	console.log(container);
-	// };
-
-	// let densityState = false;
-	// let densityValue = 800;
-
 	let particlesLimit;
 
 	const checkWindowSize = () => {
 		if (window.innerWidth < 800) {
-			// densityState = true;
 			particlesLimit = 20;
 		} else {
-			// densityState = false;
 			particlesLimit = 50;
 		}
 	};
@@ -37,62 +22,6 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 			<Particles
 				id="tsparticles"
 				options={{
-					// fullScreen: {
-					// 	enable: true,
-					// },
-					// particles: {
-					// 	number: {
-					// 		value: particlesNum,
-					// 		limit: particlesNum,
-					// 	},
-					// 	color: {
-					// 		value: '#383838',
-					// 	},
-					// 	shape: {
-					// 		type: 'circle',
-					// 		// stroke: {
-					// 		// 	width: 1,
-					// 		// 	color: '#383838',
-					// 		// },
-					// 	},
-					// 	// opacity: {
-					// 	// 	value: 1,
-					// 	// 	random: true,
-					// 	// 	anim: {
-					// 	// 		enable: true,
-					// 	// 		speed: 1,
-					// 	// 		opacity_min: 1,
-					// 	// 		sync: false,
-					// 	// 	},
-					// 	// },
-					// 	size: {
-					// 		value: 1,
-					// 		// random: true,
-					// 		// anim: {
-					// 		// 	enable: true,
-					// 		// 	speed: 7,
-					// 		// 	size_min: 1,
-					// 		// 	sync: false,
-					// 		// },
-					// 	},
-					// 	line_linked: {
-					// 		enable: true,
-					// 		distance: 120,
-					// 		color: '#383838',
-					// 		width: 1,
-					// 	},
-					// 	move: {
-					// 		enable: true,
-					// 		speed: 1,
-					// 		// direction: 'none',
-					// 		// random: true,
-					// 		// straight: false,
-					// 		// out_mode: 'out',
-					// 		// bounce: false,
-					// 	},
-					// },
-					// pauseOnOutsideViewport: true,
-					// autoPlay: true,
 					fps_limit: 50,
 					particles: {
 						number: {

@@ -28,7 +28,7 @@
 		@apply flex items-center justify-center font-main text-3xl text-primary laptop:hover:text-secondary transform laptop:hover:scale-125 transition-all duration-300;
 	}
 	::-webkit-scrollbar {
-		@apply w-3;
+		@apply w-0;
 	}
 	::-webkit-scrollbar-track {
 		@apply bg-mainbg;

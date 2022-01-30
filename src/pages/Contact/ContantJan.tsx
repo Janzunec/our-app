@@ -53,21 +53,21 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 					<div className='font-lba text-2xl'>
 						<LightUpString content='<h2>' color='tocyan' />
 					</div>
-					<h2 className='text-5xl laptop:text-6xl font-jtm group'>
+					<h2 className='text-5xl desktop:text-6xl font-jtm group'>
 						<LightUpString
-							content="Let's create"
+							content="Let's create something"
 							color='topurple'
 						/>
-						<div className=' inline-block'>
+						{/* <h2 className=' inline-block'>
 							<LightUpString
 								content='something'
 								color='topurple'
 							/>
-						</div>
-						<div className=' hidden laptop:inline-block'>
+						</h2> */}
+						<div className=' hidden desktop:inline-block'>
 							&nbsp;
 						</div>
-						<div className=' hidden w-auto transform opacity-0 translate-x-12 group-hover:translate-x-0 group-hover:opacity-100  duration-500 laptop:inline-block'>
+						<div className=' hidden w-auto transform opacity-0 translate-x-12 group-hover:translate-x-0 group-hover:opacity-100  duration-500 desktop:inline-block'>
 							<LightUpString content=' special' color='tocyan' />
 						</div>
 					</h2>
@@ -75,27 +75,46 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 						<LightUpString content='</h2>' color='tocyan' />
 					</div>
 					<div className='font-lba text-2xl'>
+						<LightUpString content='<p>' color='tocyan' />
+					</div>
+					<div className=' text-lg my-1 text-white w-10/12'>
+						If you are interested in working with me or just want to
+						contact me in general, feel free to email me or reach
+						out through any of my social media listed down below. Am
+						most responsive throug{' '}
+						<a
+							href='https://www.instagram.com/janzunec/'
+							className=' no-underline text-primary hover:text-secondary'
+						>
+							Instagram
+						</a>{' '}
+						DM's.
+					</div>
+					<div className='font-lba text-2xl'>
+						<LightUpString content='</p>' color='tocyan' />
+					</div>
+					<div className='font-lba text-2xl'>
 						<LightUpString content='<ul>' color='tocyan' />
 					</div>
-					<ul className=' text-3xl'>
-						<li>
+					<ul className=' text-4xl'>
+						<li className='mb-1'>
 							<IoLogoInstagram className=' inline-block text-4xl' />
 							&nbsp;janzunec
 						</li>
-						<li>
+						<li className='my-1'>
 							<AiOutlineLinkedin className=' inline-block text-4xl' />
 							&nbsp;Jan Zunec
 						</li>
-						<li>
+						<li className='my-1'>
 							<FiGithub className=' inline-block text-4xl' />
 							&nbsp;Janzunec
 						</li>
-						<li>
+						<li className='my-1'>
 							<FiTwitter className=' inline-block text-4xl' />
 							&nbsp;Janzunec
 						</li>
 					</ul>
-					<div className='font-lba text-2xl'>
+					<div className='font-lba text-2xl mt-2'>
 						<LightUpString content='</ul>' color='tocyan' />
 					</div>
 				</div>
@@ -168,7 +187,7 @@ const ContactJan: React.FC<ContactJanProps> = () => {
 					</div>
 					<button
 						id='btn-send'
-						className='btn btn-outline btn-accent mt-8 text-xl'
+						className='btn btn-outline btn-accent btn-lg mt-8 text-xl'
 						onClick={validateForm}
 					>
 						Send Message
