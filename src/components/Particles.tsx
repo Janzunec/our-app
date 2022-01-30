@@ -14,19 +14,22 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 	// 	console.log(container);
 	// };
 
-	let densityState = false;
-	let densityValue = 800;
-	let fpsLimit = 30;
+	// let densityState = false;
+	// let densityValue = 800;
+
+	let particlesNum = 120;
 
 	const checkWindowSize = () => {
 		if (window.innerWidth < 800) {
-			densityState = true;
-			fpsLimit = 60;
+			// densityState = true;
+			particlesNum = 30;
 		} else {
-			densityState = false;
-			fpsLimit = 30;
+			// densityState = false;
+			particlesNum = 120;
 		}
 	};
+
+	checkWindowSize();
 
 	window.addEventListener('resize', checkWindowSize);
 	return (
@@ -34,68 +37,79 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 			<Particles
 				id="tsparticles"
 				options={{
-					fullScreen: {
-						enable: true,
-						zIndex: -1,
-					},
+					// fullScreen: {
+					// 	enable: true,
+					// },
+					// particles: {
+					// 	number: {
+					// 		value: particlesNum,
+					// 		limit: particlesNum,
+					// 	},
+					// 	color: {
+					// 		value: '#383838',
+					// 	},
+					// 	shape: {
+					// 		type: 'circle',
+					// 		// stroke: {
+					// 		// 	width: 1,
+					// 		// 	color: '#383838',
+					// 		// },
+					// 	},
+					// 	// opacity: {
+					// 	// 	value: 1,
+					// 	// 	random: true,
+					// 	// 	anim: {
+					// 	// 		enable: true,
+					// 	// 		speed: 1,
+					// 	// 		opacity_min: 1,
+					// 	// 		sync: false,
+					// 	// 	},
+					// 	// },
+					// 	size: {
+					// 		value: 1,
+					// 		// random: true,
+					// 		// anim: {
+					// 		// 	enable: true,
+					// 		// 	speed: 7,
+					// 		// 	size_min: 1,
+					// 		// 	sync: false,
+					// 		// },
+					// 	},
+					// 	line_linked: {
+					// 		enable: true,
+					// 		distance: 120,
+					// 		color: '#383838',
+					// 		width: 1,
+					// 	},
+					// 	move: {
+					// 		enable: true,
+					// 		speed: 1,
+					// 		// direction: 'none',
+					// 		// random: true,
+					// 		// straight: false,
+					// 		// out_mode: 'out',
+					// 		// bounce: false,
+					// 	},
+					// },
+					fps_limit: 60,
+					// pauseOnOutsideViewport: true,
+					// autoPlay: true,
 					particles: {
 						number: {
-							value: 100,
-							limit: 100,
-							density: {
-								enable: densityState,
-								value_area: densityValue,
-							},
+							limit: 60,
 						},
 						color: {
 							value: '#383838',
 						},
-						shape: {
-							type: 'circle',
-							// stroke: {
-							// 	width: 1,
-							// 	color: '#383838',
-							// },
-						},
-						// opacity: {
-						// 	value: 1,
-						// 	random: true,
-						// 	anim: {
-						// 		enable: true,
-						// 		speed: 1,
-						// 		opacity_min: 1,
-						// 		sync: false,
-						// 	},
-						// },
-						size: {
-							value: 1,
-							// random: true,
-							// anim: {
-							// 	enable: true,
-							// 	speed: 7,
-							// 	size_min: 1,
-							// 	sync: false,
-							// },
-						},
-						line_linked: {
+						links: {
 							enable: true,
-							distance: 120,
 							color: '#383838',
-							opacity: 1,
-							width: 1,
+							distance: 150,
 						},
 						move: {
 							enable: true,
-							speed: 1.2,
-							direction: 'none',
-							random: true,
-							straight: false,
-							out_mode: 'out',
-							bounce: false,
 						},
 					},
-					fps_limit: fpsLimit,
-					pauseOnOutsideViewport: true,
 				}}
 				className=" w-screen h-screen fixed z-0"
 			/>
