@@ -40,8 +40,8 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 					},
 					particles: {
 						number: {
-							value: 110,
-							limit: 110,
+							value: 100,
+							limit: 100,
 							density: {
 								enable: densityState,
 								value_area: densityValue,
@@ -52,10 +52,10 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 						},
 						shape: {
 							type: 'circle',
-							stroke: {
-								width: 1,
-								color: '#383838',
-							},
+							// stroke: {
+							// 	width: 1,
+							// 	color: '#383838',
+							// },
 						},
 						// opacity: {
 						// 	value: 1,
@@ -79,14 +79,14 @@ const ParticlesComp: React.FC<ParticlesCompProps> = () => {
 						},
 						line_linked: {
 							enable: true,
-							distance: 110,
+							distance: 120,
 							color: '#383838',
 							opacity: 1,
 							width: 1,
 						},
 						move: {
 							enable: true,
-							speed: 1.4,
+							speed: 1.2,
 							direction: 'none',
 							random: true,
 							straight: false,

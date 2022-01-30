@@ -12,15 +12,15 @@ const Navbar: React.FC = () => {
 	const first = Math.floor(Math.random() * 2) === 1 ? 'Jan' : 'Mark';
 
 	return (
-		<nav className=' w-screen h-auto tablet:h-16 justify-between text-2xl bg-mainbg laptop:bg-transparent flex align-middle text-white min-w-full fixed left-0 bottom-0 border-t-2  tablet:border-t-0 tablet:top-0 tablet:border-b border-gray-600 z-30'>
+		<nav className=" w-screen h-auto tablet:h-16 justify-between text-2xl bg-mainbg desktop:bg-transparent flex align-middle text-white min-w-full fixed left-0 bottom-0 border-t-2  tablet:border-t-0 tablet:top-0 tablet:border-b border-gray-600 z-30">
 			<Link
-				to='/'
-				className='hidden w-1/6 laptop:w-1/8 tablet:flex items-center justify-center pb-1 font-lob text-3xl text-secondary hover:text-primary transform hover:scale-125 transition-all duration-300'
+				to="/"
+				className="hidden w-1/6 laptop:w-1/8 tablet:flex items-center justify-center pb-1 font-lob text-3xl text-secondary hover:text-primary transform hover:scale-125 transition-all duration-300"
 			>
 				JM
 			</Link>
-			<ul className='w-screen tablet:w-2/3 laptop:w-1/2 text-primary text-3xl laptop:text-3xl font-main grid grid-cols-5 tablet:grid-cols-4 border-0 py-3 px-0 m-0'>
-				<Link to='/' className='navLink tablet:hidden'>
+			<ul className="w-screen tablet:w-2/3 laptop:w-1/2 text-primary text-3xl laptop:text-3xl font-main grid grid-cols-5 tablet:grid-cols-4 border-0 py-3 px-0 m-0">
+				<Link to="/" className="navLink tablet:hidden">
 					<AiOutlineHome
 						className={`${
 							pathname === '/' ? 'hidden' : 'inline-block'
@@ -33,9 +33,9 @@ const Navbar: React.FC = () => {
 								: 'hidden'
 						} tablet:hidden`}
 					/>
-					<span className='hidden'>Home</span>
+					<span className="hidden">Home</span>
 				</Link>
-				<Link to={`/about/${first}`} className='navLink'>
+				<Link to={`/about/${first}`} className="navLink">
 					<MdPersonOutline
 						className={`${
 							pathname.includes('about')
@@ -50,9 +50,9 @@ const Navbar: React.FC = () => {
 								: 'hidden'
 						} tablet:hidden`}
 					/>
-					<span className='hidden tablet:inline-block'>about</span>
+					<span className="hidden tablet:inline-block">about</span>
 				</Link>
-				<Link to={`/skills/${first}`} className='navLink'>
+				<Link to={`/skills/${first}`} className="navLink">
 					<VscTools
 						className={`${
 							pathname.includes('skills')
@@ -60,9 +60,9 @@ const Navbar: React.FC = () => {
 								: 'text-primary'
 						} tablet:hidden`}
 					/>
-					<span className='hidden tablet:inline-block'>skills</span>
+					<span className="hidden tablet:inline-block">skills</span>
 				</Link>
-				<Link to={`/projects/${first}`} className='navLink'>
+				<Link to={`/projects/${first}`} className="navLink">
 					<VscFolderActive
 						className={`${
 							pathname.includes('projects')
@@ -70,9 +70,9 @@ const Navbar: React.FC = () => {
 								: 'text-primary'
 						} tablet:hidden`}
 					/>
-					<span className='hidden tablet:inline-block'>projects</span>
+					<span className="hidden tablet:inline-block">projects</span>
 				</Link>
-				<Link to={`/contact/${first}`} className='navLink'>
+				<Link to={`/contact/${first}`} className="navLink">
 					<RiContactsBookLine
 						className={`${
 							pathname.includes('contact')
@@ -87,7 +87,7 @@ const Navbar: React.FC = () => {
 								: 'hidden'
 						} tablet:hidden`}
 					/>
-					<span className='hidden tablet:inline-block'>contact</span>
+					<span className="hidden tablet:inline-block">contact</span>
 				</Link>
 				<hr
 					className={`h-1 w-full hidden tablet:block bg-primary border-0 mt-1 transition-all duration-300 transform translate-x-navSm laptop:translate-x-navLg ${
