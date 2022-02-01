@@ -3,41 +3,41 @@
 @tailwind utilities;
 
 @layer base {
-	body {
-		@apply min-h-screen w-screen overflow-x-hidden bg-mainbg cursor-default desktop:overflow-hidden;
-	}
-	.topurple {
-		@apply text-primary hover:text-secondary transition-all duration-150 transform-gpu;
-	}
-	.tocyan {
-		@apply text-secondary hover:text-primary transition-all duration-150 ease-stretch-out transform-gpu;
-	}
-	.threeBack {
-		@apply border-0 top-0 relative w-screen h-10 z-0 flex justify-center items-center align-middle text-center laptop:fixed laptop:top-20 laptop:-right-64;
-	}
-	.invisible {
-		@apply hidden;
-	}
-	.iconText {
-		@apply absolute w-auto p-1 mb-2 min-w-max opacity-0
+  body {
+    @apply min-h-screen w-screen overflow-x-hidden bg-mainbg cursor-default desktop:overflow-hidden;
+  }
+  .topurple {
+    @apply text-primary hover:text-secondary transition-all duration-150 transform-gpu;
+  }
+  .tocyan {
+    @apply text-secondary hover:text-primary transition-all duration-150 ease-stretch-out transform-gpu;
+  }
+  .threeBack {
+    @apply border-0 top-0 relative w-screen h-10 z-0 flex justify-center items-center align-middle text-center laptop:fixed laptop:top-20 laptop:-right-64;
+  }
+  .invisible {
+    @apply hidden;
+  }
+  .iconText {
+    @apply absolute w-auto p-1 mb-2 min-w-max opacity-0
         rounded-md shadow-md text-white bg-gray-700
         text-xs font-bold -translate-y-16 bottom-full
         transition-all duration-200 scale-0 origin-bottom;
-	}
-	.navLink {
-		@apply flex items-center justify-center font-main text-3xl text-primary laptop:hover:text-secondary transform laptop:hover:scale-125 transition-all duration-300;
-	}
-	::-webkit-scrollbar {
-		@apply w-0;
-	}
-	::-webkit-scrollbar-track {
-		@apply bg-mainbg;
-	}
-	::-webkit-scrollbar-thumb {
-		@apply shadow-md bg-gray-700 hover:bg-gray-600 rounded-lg
+  }
+  .navLink {
+    @apply flex items-center justify-center font-main text-3xl text-primary laptop:hover:text-secondary transform laptop:hover:scale-125 transition-all duration-300;
+  }
+  ::-webkit-scrollbar {
+    @apply w-0;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-mainbg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply shadow-md bg-gray-700 hover:bg-gray-600 rounded-lg
 		/* box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */;
-	}
-	::-webkit-scrollbar-thumb:active {
-		@apply bg-gray-500;
-	}
+  }
+  ::-webkit-scrollbar-thumb:active {
+    @apply bg-gray-500;
+  }
 }

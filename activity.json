@@ -1,0 +1,63 @@
+{
+  "success": true,
+  "data": {
+    "spotify": {
+      "track_id": "2gswVbfN1T99YRVzQN8AKw",
+      "timestamps": { "start": 1643742434429, "end": 1643742562023 },
+      "song": "Sounds of the Sea",
+      "artist": "Myríad",
+      "album_art_url": "https://i.scdn.co/image/ab67616d0000b273fb20e0052fc64324a8c4663a",
+      "album": "Sounds of the Sea"
+    },
+    "listening_to_spotify": true,
+    "kv": {},
+    "discord_user": {
+      "username": "Vrechko",
+      "public_flags": 128,
+      "id": "290867016468791297",
+      "discriminator": "6593",
+      "avatar": "9e59dd6a28fdcad79f12677b45bbea8c"
+    },
+    "discord_status": "online",
+    "activities": [
+      {
+        "type": 0,
+        "timestamps": { "start": 1643741828941 },
+        "state": "Workspace: collab",
+        "session_id": "9d840c77b254964b1dd9ee67c06d9eac",
+        "name": "Visual Studio Code",
+        "id": "b4e42ca93d10e7c6",
+        "details": "Editing activity.json",
+        "created_at": 1643742204042,
+        "buttons": ["View Repository"],
+        "assets": {
+          "small_text": "Visual Studio Code",
+          "small_image": "565945770067623946",
+          "large_text": "Editing a JSON file",
+          "large_image": "565944799761268737"
+        },
+        "application_id": "383226320970055681"
+      },
+      {
+        "type": 2,
+        "timestamps": { "start": 1643742434429, "end": 1643742562023 },
+        "sync_id": "2gswVbfN1T99YRVzQN8AKw",
+        "state": "Myríad",
+        "session_id": "9d840c77b254964b1dd9ee67c06d9eac",
+        "party": { "id": "spotify:290867016468791297" },
+        "name": "Spotify",
+        "id": "spotify:1",
+        "flags": 48,
+        "details": "Sounds of the Sea",
+        "created_at": 1643742434594,
+        "assets": {
+          "large_text": "Sounds of the Sea",
+          "large_image": "spotify:ab67616d0000b273fb20e0052fc64324a8c4663a"
+        }
+      }
+    ],
+    "active_on_discord_web": false,
+    "active_on_discord_mobile": false,
+    "active_on_discord_desktop": true
+  }
+}
