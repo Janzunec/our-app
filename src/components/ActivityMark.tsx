@@ -1,5 +1,5 @@
-import * as React from "react";
-import { Activity as ActivityType } from "use-lanyard";
+import * as React from 'react';
+import { Activity as ActivityType } from 'use-lanyard';
 
 interface ActivityMarkProps {
   activity?: ActivityType;
@@ -12,7 +12,7 @@ const ActivityMark: React.FC<ActivityMarkProps> = ({ activity }) => {
       activity.application_id &&
       activity?.assets?.large_image ? (
         <>
-          <div className="flex flex-row w-screen border-4 border-gray-700 rounded-2xl p-2 mt-16 tablet:w-max m-auto">
+          <div className="flex flex-row w-screen border-4 border-gray-700 rounded-2xl p-2 mt-16 tablet:w-max tablet:m-auto tablet:mt-8">
             <img
               src={`https://cdn.discordapp.com/app-assets/${activity.application_id}/${activity.assets.large_image}.png`}
               alt="activity image"
@@ -20,11 +20,11 @@ const ActivityMark: React.FC<ActivityMarkProps> = ({ activity }) => {
             />
 
             <div className="flex flex-col w-full">
-              <div className="text-xl pl-2 items-center h-full flex w-full text-sm border-2 rounded-full border-gray-700 tablet:text-2xl p-3 px-10 pl-6">
+              <div className="text-xl pl-2 items-center h-full flex w-full border-2 rounded-full border-gray-700 tablet:text-3xl tablet:p-3 tablet:px-10 tablet:pl-6">
                 {activity?.details}
               </div>
               {activity?.state ? (
-                <div className="text-xl pl-2 items-center h-full flex w-full text-sm border-2 rounded-full border-gray-700 tablet:text-2xl p-3 px-10 pl-6">
+                <div className="text-xl pl-2 items-center h-full flex w-full border-2 rounded-full border-gray-700 tablet:text-3xl tablet:p-3 tablet:px-10 tablet:pl-6">
                   {activity?.state}
                 </div>
               ) : (
