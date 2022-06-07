@@ -1,9 +1,8 @@
 // import { Sphere } from '@react-three/drei';
-import React, { useRef, useEffect } from "react";
-import * as THREE from "three";
-import { Mesh, Scene } from "three";
-import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
+import { useEffect } from 'react';
+import * as THREE from 'three';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
 const ThreeObj = () => {
   useEffect(() => {
@@ -13,8 +12,8 @@ const ThreeObj = () => {
     const glLoader = new GLTFLoader();
 
     const loadReactLogo = glLoader.load(
-      "ReactLogo/ReactLogo.gltf",
-      (gltf) => {
+      'ReactLogo/ReactLogo.gltf',
+      gltf => {
         const reactLogo = gltf.scene;
         scene.add(reactLogo);
         reactLogo.position.set(0, 0, 0);
@@ -34,7 +33,7 @@ const ThreeObj = () => {
         );
         camera.position.set(0, 0, 10);
 
-        window.addEventListener("resize", () => {
+        window.addEventListener('resize', () => {
           // Update sizes
           sizes.width = window.innerWidth;
           sizes.height = window.innerHeight;
@@ -54,7 +53,7 @@ const ThreeObj = () => {
 
         renderer.setSize(window.innerWidth / 1.3, window.innerHeight / 1.3);
 
-        renderer.domElement.classList.add("threeBack");
+        renderer.domElement.classList.add('threeBack');
         document.body.appendChild(renderer.domElement);
 
         /**
@@ -76,7 +75,7 @@ const ThreeObj = () => {
         const windowHalfX = window.innerWidth / 2;
         const windowHalfY = window.innerHeight / 2;
 
-        document.addEventListener("mousemove", (event) => {
+        document.addEventListener('mousemove', event => {
           mouseX = event.clientX - windowHalfX;
           mouseY = event.clientY - windowHalfY;
         });
@@ -165,9 +164,9 @@ const ThreeObj = () => {
         animate();
       },
       function (xhr) {
-        console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
+        console.log((xhr.loaded / xhr.total) * 100 + '% loaded');
       },
-      (err) => {
+      err => {
         console.error(err);
       }
     );

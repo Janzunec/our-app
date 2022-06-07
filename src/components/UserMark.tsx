@@ -2,7 +2,6 @@ import * as React from 'react';
 import { DiscordUser as DiscordUserType } from 'use-lanyard';
 import { Data as DataType } from 'use-lanyard';
 import { useLanyard } from 'use-lanyard';
-import Custom from './customStatus';
 
 interface UserMarkProps {
   user?: DiscordUserType;
